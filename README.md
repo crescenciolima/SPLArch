@@ -4,15 +4,15 @@ A **A SPLArch** é uma ferramenta voltada para o gerenciamento dos assets arquit
 **Pacotes Utilizados →** Para realizar a instalação dos pacotes é disponibilizado no arquivo requiremenst.txt, uma vez com o ambiente virtual (aconselhamos o uso do virtualenv) instalado será necessário utilizar o comando " pip install -r /path/to/requirements.txt "
 
 #Versão dos pacotes utilizados<br>
-* Python=2.7.3<br>
-* Django=1.5.12<br>
-* Pillow=3.0.0<br>
-* django-admin-bootstrapped==1.6.9<br>
-* django-bootstrap3==5.1.1<br>
-* html5lib==0.9999999<br>
-* pisa==3.0.33<br>
-* reportlab==2.6<br>
-* django-mptt==0.7.4<br>
+* Python 2.7.3<br>
+* Django 1.5.12<br>
+* Pillow 3.0.0<br>
+* django-admin-bootstrapped 1.6.9<br>
+* django-bootstrap3 5.1.1<br>
+* html5lib 0.9999999<br>
+* pisa 3.0.33<br>
+* reportlab 2.6<br>
+* django-mptt 0.7.4<br>
 
 
 #SPLArch - english version
@@ -60,9 +60,9 @@ Run project
 
 Contributors
 ---------------------------
-Crescencio Lima @cretchas, Fagner Santos @fagnerpsantos, Randler @randler
+Crescencio Lima @cretchas, Fagner Santos @fagnerpsantos, Randler Almeida @randler, Breno Andrade @brenolessa
 
 
 #SPLArch - Previous versions:
-**version 1.0** https://github.com/cretchas/projeto_es_2015_1
+**version 1.0** https://github.com/cretchas/projeto_es_2015_1<br>
 **version 2.0** https://github.com/cretchas/projeto_es_2015_2
