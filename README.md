@@ -3,6 +3,9 @@ A **A SPLArch** é uma ferramenta voltada para o gerenciamento dos assets arquit
 
 **Pacotes Utilizados →** Para realizar a instalação dos pacotes é disponibilizado no arquivo requiremenst.txt, uma vez com o ambiente virtual (aconselhamos o uso do virtualenv) instalado será necessário utilizar o comando " pip install -r /path/to/requirements.txt "
 
+License:<a href="http://www.gnu.org/licenses/gpl.html" target="blank"> GNU GPL v3</a><br>
+Content License: <a href="https://creativecommons.org/licenses/by/3.0/" target = "blank">Creative Commons 3.0 BY</a>
+
 #Versão dos pacotes utilizados<br>
 * Python 2.7.3<br>
 * Django 1.5.12<br>
@@ -61,6 +64,11 @@ Run project
 Contributors
 ---------------------------
 Crescencio Lima @cretchas, Fagner Santos @fagnerpsantos, Randler Almeida @randler, Breno Andrade @brenolessa
+
+License
+---------------------------
+License:<a href="http://www.gnu.org/licenses/gpl.html" target="blank"> GNU GPL v3</a><br>
+Content License: <a href="https://creativecommons.org/licenses/by/3.0/" target = "blank">Creative Commons 3.0 BY</a>
 
 
 #SPLArch - Previous versions:
