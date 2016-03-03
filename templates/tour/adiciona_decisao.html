@@ -1,0 +1,701 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" >
+<head>
+    <title>Add Decisão </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+
+    <!-- Le styles, placed after extrastyle to correctly override default styling -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="/static/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/overrides.css" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" /> -->
+    <script type="text/javascript">
+    //<![CDATA[
+        window.__admin_media_prefix__ = "/static/admin/";
+    //]]>
+    </script>
+    <script src="/static/admin/js/jquery-1.9.1.min.js"></script>
+    <script src="/static/admin/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+        $(document).ready(function() {
+            $( "a:contains('Siliqua')" ).text( "Decisões e Padrões" );
+            $( "li:contains('Siliqua')" ).text( "Decisões e Padrões" );
+            $(document).prop('title', 'Administração');
+        });
+        $(document).ready(function() {
+            $( "a:contains('Canarius')" ).text( "Arquiteturas" );
+            $( "li:contains('Canarius')" ).text( "Arquiteturas" );
+            $(document).prop('title', 'Administração');
+        });
+        $(document).ready(function() {
+            $( "a:contains('Ajustes')" ).text( "Empresa" );
+            $( "li:contains('Ajustes')" ).text( "Empresa" );
+            $(document).prop('title', 'Administração');
+        });
+        $(document).ready(function() {
+            $( "a:contains('Auth')" ).text( "Grupos e Usuários" );
+            $( "li:contains('Auth')" ).text( "Grupos e Usuários" );
+            $(document).prop('title', 'Administração');
+        });
+        $(document).ready(function() {
+            $( "a:contains('Users')" ).text( "Usuários" );
+            $( "li:contains('Users')" ).text( "Usuários" );
+            $(document).prop('title', 'Administração');
+        });
+    </script>
+    <link href="/static/admin/css/hopscotch.min.css" rel="stylesheet">
+    <script src="/static/admin/js/hopscotch.min.js"></script>
+    <script src="/static/admin/js/tour.js"></script>
+
+
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="/static/admin/js/actions.js"></script>
+<script type="text/javascript" src="/static/admin/js/SelectBox.js"></script>
+<script type="text/javascript" src="/static/admin/js/SelectFilter2.js"></script>
+
+
+    <meta name="robots" content="NONE,NOARCHIVE" />
+    <script type="text/javascript">
+    //<![CDATA[
+            (function($) {
+                $(document).ready(function() {
+                    $('input[type="submit"]').addClass('btn');
+                    $('[title]').tooltip();
+                });
+            }(jQuery));
+    //]]>
+    </script>
+</head>
+
+
+<body class="siliqua-decisao change-form">
+
+<!-- Container -->
+<div class="container">
+
+
+    <!-- Header -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+<span id="siliqua"><a href="http://127.0.0.1:8000/admin/siliqua/" class="navbar-brand">Decisões e Padrões</a></span>
+<span id="canary"><a href="http://127.0.0.1:8000/admin/canarius/" class="navbar-brand">Arquiteturas</a></span>
+
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, <strong>admin</strong> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+
+                                <li><a href="/admin/password_change/">Change password</a></li>
+
+                                <li><a href="/admin/logout/">Log out</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="divider-vertical"></li>
+
+
+
+                        <li class="dropdown" id="recent-actions-module">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recent Actions <b class="caret"></b></a>
+
+
+                            <ul class="dropdown-menu">
+
+                                <li class="changelink">
+                                    <a href="canarius/arquitetura/1/">
+                                        <i class="icon-edit"></i>
+                                        asdasasda
+
+                                        <span class="mini quiet">(Arquitetura)</span>
+
+                                    </a>
+                                </li>
+
+                                <li class="addlink">
+                                    <a href="canarius/visaoestrutural/1/">
+                                        <i class="icon-plus"></i>
+                                        kkkkkkkk
+
+                                        <span class="mini quiet">(Visão estrutural)</span>
+
+                                    </a>
+                                </li>
+
+                                <li class="addlink">
+                                    <a href="canarius/visaocomportamental/1/">
+                                        <i class="icon-plus"></i>
+                                        Teste Feature
+
+                                        <span class="mini quiet">(Visão comportamental)</span>
+
+                                    </a>
+                                </li>
+
+                                <li class="addlink">
+                                    <a href="canarius/elemento/1/">
+                                        <i class="icon-plus"></i>
+                                        kkkkkkkkk
+
+                                        <span class="mini quiet">(Elemento)</span>
+
+                                    </a>
+                                </li>
+
+                                <li class="addlink">
+                                    <a href="canarius/modulo/1/">
+                                        <i class="icon-plus"></i>
+                                        kkkkkkkkk
+
+                                        <span class="mini quiet">(Módulo)</span>
+
+                                    </a>
+                                </li>
+
+                                <li class="addlink">
+                                    <a href="canarius/componente/1/">
+                                        <i class="icon-plus"></i>
+                                        kkkkkkkkkkkkk
+
+                                        <span class="mini quiet">(Componente)</span>
+
+                                    </a>
+                                </li>
+
+                                <li class="changelink">
+                                    <a href="canarius/arquitetura/1/">
+                                        <i class="icon-edit"></i>
+                                        asdasasda
+
+                                        <span class="mini quiet">(Arquitetura)</span>
+
+                                    </a>
+                                </li>
+
+                                <li class="addlink">
+                                    <a href="siliqua/decisao/1/">
+                                        <i class="icon-plus"></i>
+                                        Decisãozinha
+
+                                        <span class="mini quiet">(Decisão)</span>
+
+                                    </a>
+                                </li>
+
+                                <li class="addlink">
+                                    <a href="siliqua/padrao/1/">
+                                        <i class="icon-plus"></i>
+                                        aaaaaaa
+
+                                        <span class="mini quiet">(Padrão)</span>
+
+                                    </a>
+                                </li>
+
+                                <li class="addlink">
+                                    <a href="siliqua/tagpadrao/1/">
+                                        <i class="icon-plus"></i>
+                                        aaaaaaaaaa
+
+                                        <span class="mini quiet">(Tag de Padrão)</span>
+
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                <div class="pull-right">
+                    <a href="http://127.0.0.1:8000/form_pesquisa" class="glyphicon glyphicon-search navbar-brand" > <span style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 14px;">Pesquisar</span></a>
+                </div>
+
+
+
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <!-- END Header -->
+    <div class="row">
+        <div class="col-sm-12">
+
+<ul class="breadcrumb">
+<li><a href="/admin/">Home</a></li>
+<li><a href="/admin/siliqua/">Siliqua</a></li>
+<li><a href="/admin/siliqua/decisao/">Decisões</a></li>
+<li>Add Decisão</li>
+</ul>
+
+        </div>
+    </div>
+
+
+    <!-- Content -->
+    <div id="content" class="colM">
+
+        <div class="navbar navbar-default">
+            <div class="navbar-inner">
+
+                <a class="navbar-brand">Add Decisão</a>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form class="form-horizontal" enctype="multipart/form-data" action="" method="post" id="decisao_form"><input type='hidden' name='csrfmiddlewaretoken' value='s1e2RHXqq6sUFVD4oiDC4Tl9OSBH3HaM' />
+    <div class="alert alert-warning">Fields in <strong>bold</strong> are required.</div>
+
+
+
+
+    <div id="content-main">
+        <div>
+
+
+
+
+
+<fieldset class="_module _aligned" id="fieldset-1" style="background:transparent">
+
+    <div class="fields ">
+
+
+            <div class="row"><div class="control-group  field-nome">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_nome" class="required">Nome:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <input class="vTextField" id="id_nome" maxlength="255" name="nome" type="text" />
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-descricao">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_descricao" class="required">Descrição:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <textarea class="vLargeTextField" cols="40" id="id_descricao" name="descricao" rows="10">
+</textarea>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-objetivo">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_objetivo" class="required">Objetivo:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <textarea class="vLargeTextField" cols="40" id="id_objetivo" name="objetivo" rows="10">
+</textarea>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-motivacao">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_motivacao" class="required">Motivação:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <textarea class="vLargeTextField" cols="40" id="id_motivacao" name="motivacao" rows="10">
+</textarea>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-tipoDeDecisao">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_tipoDeDecisao" class="required">Tipo de decisão:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <select id="id_tipoDeDecisao" name="tipoDeDecisao">
+<option value="" selected="selected">---------</option>
+<option value="1">aaaa</option>
+</select><a href="/admin/siliqua/tipodecisao/add/" class="add-another" id="add_id_tipoDeDecisao" onclick="return showAddAnotherPopup(this);"> <img src="/static/admin/img/icon_addlink.gif" width="10" height="10" alt="Add Another"/></a>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-escopo">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_escopo" class="required">Escopo:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <textarea class="vLargeTextField" cols="40" id="id_escopo" name="escopo" rows="10">
+</textarea>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-hipoteses">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_hipoteses" class="required">Hipóteses:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <textarea class="vLargeTextField" cols="40" id="id_hipoteses" name="hipoteses" rows="10">
+</textarea>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-restricoes">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_restricoes" class="required">Restrições:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <textarea class="vLargeTextField" cols="40" id="id_restricoes" name="restricoes" rows="10">
+</textarea>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-alternativas">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_alternativas" class="required">Alternativas:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <textarea class="vLargeTextField" cols="40" id="id_alternativas" name="alternativas" rows="10">
+</textarea>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-implicacoes">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_implicacoes" class="required">Implicações:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <textarea class="vLargeTextField" cols="40" id="id_implicacoes" name="implicacoes" rows="10">
+</textarea>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-decisaoRelacionada">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_decisaoRelacionada">Decisões relacionadas:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <select multiple="multiple" class="selectfilter" id="id_decisaoRelacionada" name="decisaoRelacionada">
+<option value="1">Decisãozinha</option>
+</select><script type="text/javascript">addEvent(window, "load", function(e) {SelectFilter.init("id_decisaoRelacionada", "decisões relacionadas", 0, "/static/admin/"); });</script>
+<a href="/admin/siliqua/decisao/add/" class="add-another" id="add_id_decisaoRelacionada" onclick="return showAddAnotherPopup(this);"> <img src="/static/admin/img/icon_addlink.gif" width="10" height="10" alt="Add Another"/></a>
+
+
+
+                                    <span class="help-block"> Hold down "Control", or "Command" on a Mac, to select more than one.</span>
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-necessidades">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_necessidades" class="required">Necessidades:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <textarea class="vLargeTextField" cols="40" id="id_necessidades" name="necessidades" rows="10">
+</textarea>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-notas">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_notas" class="required">Notas:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <textarea class="vLargeTextField" cols="40" id="id_notas" name="notas" rows="10">
+</textarea>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-estado">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_estado" class="required">Estado:</label>
+                            </div>
+                            <div class="controls col-md-9">
+
+                                    <select id="id_estado" name="estado">
+<option value="" selected="selected">---------</option>
+<option value="Sugerido">Sugerido</option>
+<option value="Revisado">Revisado</option>
+<option value="Aprovado">Aprovado</option>
+<option value="Rejeitado">Rejeitado</option>
+</select>
+
+
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-categorias">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_categorias" class="required" >Categorias:</label>
+                            </div>
+                            <div class="controls col-md-9" data-toggle="popover" data-trigger="hover" data-content="Selecione qual categoria se enquadra seu projeto" data-placement="left">
+
+                                    <select multiple="multiple" class="selectfilter" id="id_categorias" name="categorias" >
+<option value="1">aaaaaaaaa</option>
+</select><script type="text/javascript">addEvent(window, "load", function(e) {SelectFilter.init("id_categorias", "categorias", 0, "/static/admin/"); });</script>
+<a href="/admin/siliqua/tagdecisao/add/" class="add-another" id="add_id_categorias" onclick="return showAddAnotherPopup(this);"> <img src="/static/admin/img/icon_addlink.gif" width="10" height="10" alt="Add Another"/></a>
+
+
+
+                                    <span class="help-block"> Hold down "Control", or "Command" on a Mac, to select more than one.</span>
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+            <div class="row"><div class="control-group  field-padraoUtilizado">
+
+                    <div class="col-md-12 form-group ">
+
+                            <div class="control-label col-md-3">
+                                <label for="id_padraoUtilizado" data-toggle="popover" data-trigger="hover" data-content="Conteudo pertencente aqui" data-placement="left">Padrão utilizado:</label>
+                            </div>
+                            <div class="controls col-md-9" data-toggle="popover" data-trigger="hover" data-content="Selecione qual padrão será utilizado em seu projeto" data-placement="left">
+
+                                    <select multiple="multiple" class="selectfilter" id="id_padraoUtilizado" name="padraoUtilizado">
+<option value="1">aaaaaaa</option>
+</select><script type="text/javascript">addEvent(window, "load", function(e) {SelectFilter.init("id_padraoUtilizado", "padrão utilizado", 0, "/static/admin/"); });</script>
+<a href="/admin/siliqua/padrao/add/" class="add-another" id="add_id_padraoUtilizado" onclick="return showAddAnotherPopup(this);"> <img src="/static/admin/img/icon_addlink.gif" width="10" height="10" alt="Add Another"/></a>
+
+
+
+                                    <span class="help-block"> Hold down "Control", or "Command" on a Mac, to select more than one.</span>
+
+                            </div>
+
+                    </div>
+
+            </div></div>
+
+    </div>
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+           <script type="text/javascript">document.getElementById("id_nome").focus();</script>
+
+
+
+
+<script type="text/javascript">
+(function($) {
+    var field;
+
+
+})(django.jQuery);
+
+</script>
+
+
+        </div>
+    </div>
+
+    <div class="form-actions">
+
+<div class="pull-left">
+
+</div>
+<div class="pull-right">
+<input type="submit" value="Save and add another" class="btn btn-default" name="_addanother"  />
+<input type="submit" value="Save and continue editing" class="btn btn-default" name="_continue" />
+<input type="submit" value="Save" class="btn btn-primary default" name="_save" />
+</div>
+
+    </div>
+</form>
+
+
+    </div>
+    <!-- END Content -->
+
+    <footer id="footer"></footer>
+</div>
+<!-- END Container -->
+
+</body>
+</html>

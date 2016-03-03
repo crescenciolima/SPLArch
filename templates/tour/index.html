@@ -1,0 +1,633 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" >
+	<head>
+	<title>Site administration </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<link rel="stylesheet" type="text/css" href="/static/admin/css/dashboard.css" />
+
+	<!-- Le styles, placed after extrastyle to correctly override default styling -->
+	<link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="/static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet"  href="/static/admin/css/overrides.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/static/admin/css/splarch.css" />
+	<link rel="icon" type="image/png" href="/static/admin/img/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="/static/admin/js/vegas/jquery.vegas.min.css" />
+
+
+
+
+	<!-- <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" /> -->
+	<script type="text/javascript">
+	//<![CDATA[
+		window.__admin_media_prefix__ = "/static/admin/";
+	//]]>
+	</script>
+	<script src="/static/admin/js/jquery-1.9.1.min.js"></script>
+	<script src="/static/admin/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+	<link href="/static/tour/css/hopscotch.min.css" rel="stylesheet">
+	<script src="/static/tour/js/hopscotch.min.js"></script>
+	<script src="/static/tour/js/tour.js"></script>
+
+
+	<meta name="robots" content="NONE,NOARCHIVE" />
+	<script type="text/javascript">
+	//<![CDATA[
+			(function($) {
+				$(document).ready(function() {
+					$('input[type="submit"]').addClass('btn');
+					$('[title]').tooltip();
+				});
+			}(jQuery));
+	//]]>
+	</script>
+	</head>
+
+
+	<body class="dashboard">
+
+	<!-- Container -->
+	<div class="container">
+
+
+	<span id="siliqua"><a href="http://127.0.0.1:8000/admin/siliqua/" class="navbar-brand">Decisões e Padrões</a></span>
+	<span id="canary"><a href="http://127.0.0.1:8000/admin/canarius/" class="navbar-brand">Arquiteturas</a></span>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="navbar-inner">
+		<div class="container">
+		  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="brand" href="/admin">SPLarch</a>
+		  <div class="nav-collapse collapse">
+			<ul class="nav">
+			  <li class="">
+				<a href="#">Tour</a>
+			  </li>
+			  <li class="">
+				 <a href="/faq" target="_blank">FAQ</a>
+			  </li>
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Other options</a>
+				<ul class="dropdown-menu">
+				  <li><a href="/admin/auth/">Auth</a></li>
+				  <li><a href="/admin/faq/">FAQ options</a></li>
+				</ul>
+			  </li>
+			</ul>
+
+		  <ul class="nav pull-right">
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						 Welcome, Administrator.<b class="caret"></b>
+					</a>
+				<ul class="dropdown-menu">
+				  <li><a href="/admin/auth/user/1">profile</a></li>
+				  <li><a href="/admin/auth/user/1/password/">change password</a></li>
+				  <li><a href="/admin/logout">logout</a></li>
+				</ul>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container" id="breadcrumb">
+		<ul class="breadcrumb">
+		<li>Home</li>
+		</ul>
+	</div>
+
+	<!-- Container -->
+	<div class="container" id="main">
+
+<!-- Content -->
+<div id="content" class="colMS">
+	<div class="row-fluid">
+	<div id="content-main" class="span12">
+		<div class="tabbable">
+				<div id="container-architecture">
+	<h2 id='architecture' class="app-name"><a href="/admin/architecture/">Architecture</a></h2>
+					<table id="table-architecture "summary="Models available in the Architecture application." class="table table-striped table-bordered">
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/architecture/api/">APIs</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/architecture/api/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/architecture/api/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/architecture/ddsa/">DSSAs</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/architecture/ddsa/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/architecture/ddsa/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/architecture/qualityscenarios/">Quality Scenarios</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/architecture/qualityscenarios/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/architecture/qualityscenarios/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/architecture/references/">Referencess</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/architecture/references/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/architecture/references/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/architecture/scenarios/">Scenario Details</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/architecture/scenarios/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/architecture/scenarios/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/architecture/technology/">Technologies</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/architecture/technology/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/architecture/technology/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+					</table>
+				</div>
+
+				<div id="container-auth">
+
+	<h2 id='auth' class="app-name"><a href="/admin/auth/">Auth</a></h2>
+
+
+					<table id="table-auth "summary="Models available in the Auth application." class="table table-striped table-bordered">
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/auth/group/">Groups</a>
+
+
+
+								<div class="pull-right">
+                                    <a href="/admin/auth/group/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/auth/group/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/auth/user/">Users</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/auth/user/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/auth/user/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+					</table>
+				</div>
+
+				<div id="container-faq">
+
+	<h2 id='faq' class="app-name"><a href="/admin/faq/">Faq</a></h2>
+
+
+					<table id="table-faq "summary="Models available in the Faq application." class="table table-striped table-bordered">
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/faq/question/">Frequently asked questions</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/faq/question/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/faq/question/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/faq/topic/">Topics</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/faq/topic/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/faq/topic/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+					</table>
+				</div>
+
+				<div id="container-requirement">
+
+	<h2 id='requirement' class="app-name"><a href="/admin/requirement/">Requirement</a></h2>
+
+
+					<table id="table-requirement "summary="Models available in the Requirement application." class="table table-striped table-bordered">
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/requirement/requirement/">Requirements</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/requirement/requirement/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/requirement/requirement/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/requirement/usecase/">Use cases</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/requirement/usecase/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/requirement/usecase/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+					</table>
+				</div>
+
+				<div id="container-scoping">
+
+	<h2 id='scoping' class="app-name"><a href="/admin/scoping/">Scoping</a></h2>
+
+
+					<table id="table-scoping "summary="Models available in the Scoping application." class="table table-striped table-bordered">
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/scoping/bindingtime/">Feature binding times</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/scoping/bindingtime/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/scoping/bindingtime/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/scoping/feature/">Features</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/scoping/feature/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/scoping/feature/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/scoping/glossary/">Glossary</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/scoping/glossary/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/scoping/glossary/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/scoping/product/">Products</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/scoping/product/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/scoping/product/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+						<tr>
+							<th scope="row">
+
+								<a href="/admin/scoping/project/">Projects</a>
+
+
+
+								<div class="pull-right">
+
+									<a href="/admin/scoping/project/add/" class="btn btn-mini addlink"><i class="icon-plus"></i> Add</a>
+
+
+									<a href="/admin/scoping/project/" class="btn btn-mini changelink"><i class="icon-edit"></i> Change</a>
+
+								</div>
+
+							</th>
+						</tr>
+
+					</table>
+				</div>
+
+		</div>
+	</div>
+	</div>
+
+
+
+
+							<li class="dropdown" id="recent-actions-module">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Recent Actions <b class="caret"></b></a>
+
+
+								<ul class="dropdown-menu pull-left">
+
+									<li class="changelink">
+										<a href="/admin/faq/question/3/">
+											<i class="icon-edit"></i>
+											Vivamus non lorem elit ?
+
+											<span class="mini quiet">(Frequent asked question)</span>
+
+										</a>
+									</li>
+
+									<li class="changelink">
+										<a href="/admin/faq/question/4/">
+											<i class="icon-edit"></i>
+											Nulla molestie, neque eu pretium sollicitudin ?
+
+											<span class="mini quiet">(Frequent asked question)</span>
+
+										</a>
+									</li>
+
+									<li class="changelink">
+										<a href="/admin/faq/question/2/">
+											<i class="icon-edit"></i>
+											Suspendisse a tortor eget lorem egestas volutpat ?
+
+											<span class="mini quiet">(Frequent asked question)</span>
+
+										</a>
+									</li>
+
+									<li class="addlink">
+										<a href="/admin/faq/question/7/">
+											<i class="icon-plus"></i>
+											 Morbi ut neque eget leo tempor matti ?
+
+											<span class="mini quiet">(Frequent asked question)</span>
+
+										</a>
+									</li>
+
+									<li class="addlink">
+										<a href="/admin/faq/question/6/">
+											<i class="icon-plus"></i>
+											Sed vitae placerat metus. Vivamus ligula augue ?
+
+											<span class="mini quiet">(Frequent asked question)</span>
+
+										</a>
+									</li>
+
+									<li class="addlink">
+										<a href="/admin/faq/question/5/">
+											<i class="icon-plus"></i>
+											Pellentesque vel elit posuere, luctus sem in ?
+
+											<span class="mini quiet">(Frequent asked question)</span>
+
+										</a>
+									</li>
+
+									<li class="addlink">
+										<a href="/admin/faq/question/4/">
+											<i class="icon-plus"></i>
+											Nulla molestie, neque eu pretium sollicitudin
+
+											<span class="mini quiet">(Frequent asked question)</span>
+
+										</a>
+									</li>
+
+									<li class="addlink">
+										<a href="/admin/faq/question/3/">
+											<i class="icon-plus"></i>
+											Vivamus non lorem elit.
+
+											<span class="mini quiet">(Frequent asked question)</span>
+
+										</a>
+									</li>
+
+									<li class="addlink">
+										<a href="/admin/faq/question/2/">
+											<i class="icon-plus"></i>
+											Suspendisse a tortor eget lorem egestas volutpat
+
+											<span class="mini quiet">(Frequent asked question)</span>
+
+										</a>
+									</li>
+
+									<li class="addlink">
+										<a href="/admin/faq/topic/6/">
+											<i class="icon-plus"></i>
+											ivamus pellentesque at lectus ut i
+
+											<span class="mini quiet">(Topic)</span>
+
+										</a>
+									</li>
+
+								</ul>
+							</li>
+
+		</div>
+		<!-- END Content -->
+	</div>
+	<!-- END Container -->
+
+	<div class="footer container-fluid">
+	<div class="container">
+		<div class="row">
+			<div class="span6">
+				<div class="text-left">2016 SPLarch</div>
+			</div>
+			<div class="span6">
+				<div class="text-right">
+					<ul id="links-footer">
+						<li>
+							<a href="https://github.com/cretchas/projeto_es_2015_2" target="_blank" title="Github">GitHub</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	</div>
+	</div>
+	<!-- END Container -->
+
+	</body>
+	</html>

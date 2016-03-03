@@ -1,0 +1,29 @@
+{% extends "faq/base.html" %}
+
+{% block title %}{{ block.super }}: FAQ{% endblock %}
+
+{% block body %}
+<h1 CLASS="title-faq">FAQ</h1>
+<ul id="faq-topic-list">
+  {% for topic in topics %}
+    <li class="topic">
+        <h2 class="app-name">
+            <a href="#">
+               {{ topic }}
+            </a>
+        </h2>
+
+        <ul class="questions-list">
+            {% for question in topic.questions.all %}
+              <li class="question">
+                <ul>
+                  <li class="quetion-tile"><b>{{ question.text }}</b></li>
+                  <li class="question-answer">{{ question.answer }}</li>
+                 </ul>
+              </li>
+         {% endfor %}
+        </ul>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
