@@ -166,6 +166,7 @@ class API(models.Model):
     name = models.CharField(max_length=100)
     version = models.CharField(max_length=100)
     specification = models.TextField(blank=True)
+    cliques = models.IntegerField(editable=False, default=0)
 
     def __unicode__(self):
         return self.name

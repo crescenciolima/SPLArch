@@ -1,0 +1,38 @@
+{% extends 'tbase.html' %}
+{% load staticfiles %}
+
+{% block cabecalho %}
+    <title>Cadastro de APIs</title>
+	<link rel="stylesheet" type="text/css" href="{% static "styles/bootstrap.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "styles/signin.css" %}">
+
+{% endblock %}
+
+{% block corpo %}
+	<div class="container">
+        <br />
+	<form class="form-signin" action="/cadastro/api" method="POST">
+	    {% csrf_token %}
+        <h2 class="form-signin-heading" style="text-align: center;">Cadastrar API</h2>
+        <br />
+        <input id="id_cliques" name="cliques" type="text" hidden
+			class="form-control" placeholder="Cliques" value="{{ api.cliques }}"
+			>
+
+			<input id="id_name" name="name" type="text"
+			class="form-control" placeholder="Name" value="{{ api.name }}"
+			required>
+
+        	<input id="id_version" name="version" type="text"
+			class="form-control" placeholder="Version" value="{{ api.version }}"
+			required>
+
+			<input id="id_specification" name="specification" type="text"
+			class="form-control" placeholder="Specification" value="{{ api.specification }}"
+			required>
+
+			<hr/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
+	</form>
+	</div>
+{% endblock %}

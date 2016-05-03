@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from architecture import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -16,6 +17,10 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
      url(r'^$', include(admin.site.urls)),
     url('^faq/', include('SPLArch.faq.urls')),
-    url(r'^tour/', 'SPLArch.architecture.views.home')
+    url(r'^index/', views.index, name='index'),
+    url(r'^tour/', 'SPLArch.architecture.views.home'),
+    url(r'^show_api/(?P<api_id>\d+)$', views.api, name='api'),
+    url(r'^cadastro/api', views.cadastrarApi, name='cadastro')
+
 
 )
