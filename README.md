@@ -22,7 +22,7 @@ Content License: <a href="https://creativecommons.org/licenses/by/3.0/" target =
 
 Introduction
 ------------
-Splash is a web application that helps software development documentation, allowing the issuance of personalized documents with different views of software implementation
+**SPLArch** is a web application that helps managing architectural assets from software product lines projects. The tool was developed using Python programming language and Django framework. It also allows the issuance of personalized documents with different views of software implementation.
 
 
 Requirements
