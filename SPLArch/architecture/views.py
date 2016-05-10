@@ -3,11 +3,15 @@ from django.shortcuts import render
 from SPLArch.architecture.forms import ApiForm
 from SPLArch.architecture.models import Architecture, API
 from django.shortcuts import render_to_response
+from django.shortcuts import redirect
 
 
 
 def home(request):
     return render(request, "tour/index.html")
+
+def ver(request):
+    return render(request, 'index.html')
 
 def index(request):
 	return render(request, 'lista_api.html', {'apis' : API.objects.filter().order_by('-cliques').distinct()[:6]})
@@ -24,9 +28,8 @@ def cadastrarApi(request):
         form = ApiForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return render_to_response('confirma.html', {})
+            return redirect('/index')
     else:
         form = ApiForm()
 
     return render(request, "show_api.html", {'form': form}, context_instance=RequestContext(request))
-

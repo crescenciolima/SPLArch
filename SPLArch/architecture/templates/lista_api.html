@@ -1,84 +1,75 @@
 {% extends 'tbase.html' %}
 {% load staticfiles %}
-{% block cabeçalho %}
 
-<title>APIs</title>
+{% block cabecalho %}
+    <link rel="stylesheet" href="{% static "adminlte/bootstrap/css/bootstrap.min.css" %}">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="{% static "adminlte/dist/css/AdminLTE.min.css" %}">
+
+	<!-- AdminLTE Skins. Choose a skin from the css/skins
+	folder instead of downloading all of them to reduce the load. -->
+	<link rel="stylesheet" href="{% static "adminlte/dist/css/skins/_all-skins.min.css" %}">
+
+	<!-- iCheck -->
+	<link rel="stylesheet" href="{% static "adminlte/plugins/iCheck/flat/blue.css" %}">
+
+	<!-- Morris chart -->
+
+	<!-- jvectormap -->
+	<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+	<link rel="stylesheet" href="{% static "adminlte/plugins/datepicker/datepicker3.css" %}">
+
+	<!-- Daterange picker -->
+	<link rel="stylesheet" href="{% static "adminlte/plugins/daterangepicker/daterangepicker-bs3.css" %}">
+
+	<!-- bootstrap wysihtml5 - text editor -->
+	<link rel="stylesheet" href="{% static "adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" %}">
+<title>Cadastro de APIs</title>
+
 {% endblock %}
 {% block corpo %}
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <span>SPLArch</span>
-      </a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li ><a href="index">Home</a></li>
-        <li class="active"><a href="lista_laboratorio">APIs</a></li>
-        <li ><a href="/">Logout</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="page-header">
-          <h1>Lista de APIs</h1></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section">
 
-    <div class="container">
-      <form class="form-signin" action="/cadastro/api" method="POST">
-        <input type="text" placeholder="Search..." required>
-        <input type="submit" value="Search">
-      </form>
-      <div class="row">
+              <div class="row">
+            <div class="col-xs-12">
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Responsive Hover Table</h3>
+                  <div class="box-tools">
 
-        <div class="col-lg-12">
-          <div class="ibox float-e-margins">
-            <div class="ibox-content">
-
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Version</th>
-                    <th>Specification</th>
-                    <th>Usages</th>
-                    <th>Show</th>
-
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for api in apis %}
-                  <tr>
+                  </div>
+                </div><!-- /.box-header -->
+                <div class="box-body table-responsive no-padding">
+                  <table class="table table-hover">
+                    <tr>
+                      <th>Name</th>
+                      <th>Version</th>
+                      <th>Specification</th>
+                      <th>Usages</th>
+                      <th>Show</th>
+                    </tr>
+                    <tr>
+                        {% for api in apis %}
                     <td>{{api.name}}</td>
                     <td>{{api.version}}</td>
                     <td>{{api.specification}}</td>
                     <td>{{ api.cliques }} </td>
                     <td><a href="{% url 'api' api.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
                     {% endfor %}
-                  </tbody>
-                </table>
+                    </tr>
 
-              </div>
+                  </table>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
 
   {% endblock %}
