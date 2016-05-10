@@ -17,9 +17,9 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
      url(r'^$', include(admin.site.urls)),
     url('^faq/', include('SPLArch.faq.urls')),
-    url(r'^index/', views.index, name='index'),
+    url(r'^lista_api/', views.lista_api, name='index'),
     url(r'^tour/', 'SPLArch.architecture.views.home'),
-    url(r'^show_api/(?P<api_id>\d+)$', views.api, name='api'),
+    url(r'^cadastrar_api/(?P<api_id>\d+)$', views.api, name='cadastrar_api'),
     url(r'^cadastro/api', views.cadastrarApi, name='cadastro'),
     url(r'^teste', views.ver, name='ver')
 

@@ -13,23 +13,23 @@ def home(request):
 def ver(request):
     return render(request, 'index.html')
 
-def index(request):
-	return render(request, 'lista_api.html', {'apis' : API.objects.filter().order_by('-cliques').distinct()[:6]})
+def lista_api(request):
+	return render(request, 'lista_api.html', {'apis' : API.objects.filter().order_by('-cliques').distinct()})
 
 def api(request, api_id):
     api = API.objects.get(id=api_id)
     cliques = api.cliques;
     api.cliques = cliques + 1;
     api.save();
-    return render(request, 'show_api.html', {"api" : api})
+    return render(request, 'cadastrar_api.html', {"api" : api})
 
 def cadastrarApi(request):
     if request.method == "POST":
         form = ApiForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('/index')
+            return redirect('/lista_api')
     else:
         form = ApiForm()
 
-    return render(request, "show_api.html", {'form': form}, context_instance=RequestContext(request))
+    return render(request, "cadastrar_api.html", {'form': form}, context_instance=RequestContext(request))
