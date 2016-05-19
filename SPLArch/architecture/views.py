@@ -5,7 +5,8 @@ from SPLArch.architecture.models import Architecture, API
 from django.shortcuts import render_to_response
 from django.shortcuts import redirect
 
-
+# example/app/views.py
+from django.shortcuts import render
 
 def home(request):
     return render(request, "tour/index.html")
