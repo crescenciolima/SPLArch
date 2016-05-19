@@ -17,6 +17,10 @@ def ver(request):
 def lista_api(request):
 	return render(request, 'lista_api.html', {'apis' : API.objects.filter().order_by('-cliques').distinct()})
 
+def show_api(request, api_id):
+    api = API.objects.get(id=api_id)
+    return render(request, 'show_api.html', {"api" : api})
+
 def api(request, api_id):
     api = API.objects.get(id=api_id)
     cliques = api.cliques;

@@ -52,6 +52,7 @@
                       <th>Specification</th>
                       <th>Usages</th>
                       <th>Show</th>
+                      <th>New</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -61,6 +62,7 @@
                     <td>{{api.version}}</td>
                     <td>{{api.specification}}</td>
                     <td>{{ api.cliques }} </td>
+                    <td><a href="{% url 'show_api' api.id %}"><i class="fa fa-check text-navy"></i></a></td>
                     <td><a href="{% url 'cadastrar_api' api.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
                       </tr>
                     {% endfor %}

@@ -20,6 +20,7 @@ urlpatterns = patterns('',
     url(r'^lista_api/', views.lista_api, name='index'),
     url(r'^tour/', 'SPLArch.architecture.views.home'),
     url(r'^cadastrar_api/(?P<api_id>\d+)$', views.api, name='cadastrar_api'),
+    url(r'^show_api/(?P<api_id>\d+)$', views.show_api, name='show_api'),
     url(r'^cadastro/api', views.cadastrarApi, name='cadastro'),
     url(r'^teste', views.ver, name='ver')
 
