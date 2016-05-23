@@ -1,7 +1,7 @@
 # Create your views here.
 from django.shortcuts import render
 from SPLArch.architecture.forms import ApiForm
-from SPLArch.architecture.models import Architecture, API
+from SPLArch.architecture.models import *
 from django.shortcuts import render_to_response
 from django.shortcuts import redirect
 
@@ -16,6 +16,15 @@ def ver(request):
 
 def lista_api(request):
 	return render(request, 'lista_api.html', {'apis' : API.objects.filter().order_by('-cliques').distinct()})
+
+def lista_dssa(request):
+	return render(request, 'lista_dssa.html', {'dssas' : DDSA.objects.all})
+
+def lista_references(request):
+	return render(request, 'lista_references.html', {'references' : References.objects.all})
+
+def lista_technologies(request):
+	return render(request, 'lista_technologies.html', {'technologies' : Technology.objects.all})
 
 def show_api(request, api_id):
     api = API.objects.get(id=api_id)
