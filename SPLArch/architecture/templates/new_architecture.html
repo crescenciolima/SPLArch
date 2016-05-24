@@ -1,0 +1,85 @@
+{% extends 'tbase.html' %}
+{% load staticfiles %}
+
+{% block cabecalho %}
+
+    <link href="{% static "adminlte/bootstrap/css/jquery.steps.css" %}" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static "adminlte/bootstrap/css/bootstrap.min.css" %}">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="{% static "adminlte/dist/css/AdminLTE.min.css" %}">
+
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="{% static "adminlte/dist/css/skins/_all-skins.min.css" %}">
+
+<!-- iCheck -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/iCheck/flat/blue.css" %}">
+
+<!-- Morris chart -->
+
+<!-- jvectormap -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+
+<!-- Date Picker -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+<link rel="stylesheet" href="{% static "adminlte/plugins/datepicker/datepicker3.css" %}">
+
+<!-- Daterange picker -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/daterangepicker/daterangepicker-bs3.css" %}">
+
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" %}">
+
+<link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
+
+<title>Show API</title>
+
+{% endblock %}
+{% block corpo %}
+
+<div class="col-lg-12">
+<div class="ibox float-e-margins">
+
+    <div class="ibox-content">
+
+        <div id="wizard">
+            <h1>First Step</h1>
+            <div class="step-content">
+                <div class="text-center m-t-md">
+                <h2>Hello in Step 1</h2>
+                <p>
+                    This is the first content.
+                </p>
+                </div>
+            </div>
+
+            <h1>Second Step</h1>
+            <div class="step-content">
+                <div class="text-center m-t-md">
+                    <h2>This is step 2</h2>
+                    <p>
+                        This content is diferent than the first one.
+                    </p>
+                </div>
+            </div>
+
+            <h1>Third Step</h1>
+            <div class="step-content">
+                <div class="text-center m-t-md">
+                    <h2>This is step 3</h2>
+                    <p>
+                        This is last content.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+{% endblock %}

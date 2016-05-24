@@ -21,9 +21,11 @@ urlpatterns = patterns('',
     url(r'^lista_dssa/', views.lista_dssa, name='dssa'),
     url(r'^lista_references/', views.lista_references, name='references'),
     url(r'^lista_technologies/', views.lista_technologies, name='technologies'),
+    url(r'^new_architecture/', views.new_architecture, name='new_architecture'),
     url(r'^tour/', 'SPLArch.architecture.views.home'),
     url(r'^cadastrar_api/(?P<api_id>\d+)$', views.api, name='cadastrar_api'),
     url(r'^show_api/(?P<api_id>\d+)$', views.show_api, name='show_api'),
+    url(r'^show_references/(?P<reference_id>\d+)$', views.show_references, name='show_references'),
     url(r'^cadastro/api', views.cadastrarApi, name='cadastro'),
     url(r'^teste', views.ver, name='ver')
 

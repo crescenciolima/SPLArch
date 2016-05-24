@@ -17,15 +17,6 @@ def ver(request):
 def lista_api(request):
 	return render(request, 'lista_api.html', {'apis' : API.objects.filter().order_by('-cliques').distinct()})
 
-def lista_dssa(request):
-	return render(request, 'lista_dssa.html', {'dssas' : DDSA.objects.all})
-
-def lista_references(request):
-	return render(request, 'lista_references.html', {'references' : References.objects.all})
-
-def lista_technologies(request):
-	return render(request, 'lista_technologies.html', {'technologies' : Technology.objects.all})
-
 def show_api(request, api_id):
     api = API.objects.get(id=api_id)
     return render(request, 'show_api.html', {"api" : api})
@@ -47,3 +38,20 @@ def cadastrarApi(request):
         form = ApiForm()
 
     return render(request, "cadastrar_api.html", {'form': form}, context_instance=RequestContext(request))
+
+
+def lista_dssa(request):
+	return render(request, 'lista_dssa.html', {'dssas' : DDSA.objects.all})
+
+def lista_references(request):
+	return render(request, 'lista_references.html', {'references' : References.objects.all})
+
+def show_references(request, reference_id):
+    reference = References.objects.get(id=reference_id)
+    return render(request, 'show_references.html', {"reference": reference})
+
+def new_architecture(request):
+	return render(request, 'new_architecture.html')
+
+def lista_technologies(request):
+	return render(request, 'lista_technologies.html', {'technologies' : Technology.objects.all})

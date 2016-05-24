@@ -47,9 +47,9 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                      <th>Name</th>
-                      <th>Version</th>
-                      <th>Specification</th>
+                      <th>Title</th>
+                      <th>Author</th>
+                      <th>Publisher</th>
                       <th>Usages</th>
                       <th>Show</th>
                       <th>New</th>
@@ -62,7 +62,7 @@
                     <td>{{reference.author}}</td>
                     <td>{{reference.publisher}}</td>
                     <td>{{ api.cliques }} </td>
-                    <td><a href="{% url 'show_api' reference.id %}"><i class="fa fa-check text-navy"></i></a></td>
+                    <td><a href="{% url 'show_references' reference.id %}"><i class="fa fa-check text-navy"></i></a></td>
                     <td><a href="{% url 'cadastrar_api' reference.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
                       </tr>
                     {% endfor %}

@@ -3,7 +3,8 @@
 
 {% block cabecalho %}
     <link rel="stylesheet" href="{% static "adminlte/bootstrap/css/bootstrap.min.css" %}">
-	<!-- Font Awesome -->
+
+  <!-- Font Awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!-- Ionicons -->
 	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -49,8 +50,6 @@
                       <tr>
                       <th>Name</th>
                       <th>Version</th>
-                      <th>Specification</th>
-                      <th>Usages</th>
                       <th>Show</th>
                       <th>New</th>
                       </tr>
@@ -58,12 +57,10 @@
                     <tbody>
                      {% for dssa in dssas %}
                       <tr>
-                    <td>{{api.name}}</td>
-                    <td>{{api.version}}</td>
-                    <td>{{api.specification}}</td>
-                    <td>{{ api.cliques }} </td>
-                    <td><a href="{% url 'show_api' api.id %}"><i class="fa fa-check text-navy"></i></a></td>
-                    <td><a href="{% url 'cadastrar_api' api.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
+                    <td>{{dssa.name}}</td>
+                    <td>{{dssa.introduction}}</td>
+                    <td>{{api.cliques}} </td>
+
                       </tr>
                     {% endfor %}
                     </tbody>
