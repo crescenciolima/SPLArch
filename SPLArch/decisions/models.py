@@ -3,134 +3,80 @@ from django.db import models
 from django.db.models import permalink
 
 
-class TipoPadrao(models.Model):
-    nome = models.CharField(max_length=255)
-    cliques = models.IntegerField(editable=False, default=0)
+class TypePattern(models.Model):
+    nome = models.CharField(verbose_name='name', max_length=255)
 
     class Meta:
-        verbose_name = 'Tipo de Padrão'
-        verbose_name_plural = 'Tipos de Padrões'
+        verbose_name = 'Types of Pattern'
+        verbose_name_plural = 'Types of Patterns'
 
     def __unicode__(self):
         return '%s' % self.nome
 
-    @permalink
-    def get_absolute_url(self):
-        return ('view_tipo_padrao', None, { 'id': self.id })
-
-
 # --------------------------------------------------------------------------------------
 
-class TipoDecisao(models.Model):
-    nome = models.CharField(max_length=255)
-    cliques = models.IntegerField(editable=False, default=0)
+class TypeDecision(models.Model):
+    nome = models.CharField(verbose_name='name', max_length=255)
 
     class Meta:
-        verbose_name = 'Tipo de Decisão'
-        verbose_name_plural = 'Tipos de Decisões'
+        verbose_name = 'Type of Decision'
+        verbose_name_plural = 'Types of Decisions'
     def __unicode__(self):
         return '%s' % self.nome
 
-    @permalink
-    def get_absolute_url(self):
-        return ('view_tipo_decisao', None, { 'id': self.id })
-
 # --------------------------------------------------------------------------------------
 
-class Padrao(models.Model):
+class Pattern(models.Model):
 
     class Meta:
-        verbose_name = 'Padrão'
-        verbose_name_plural = 'Padrões'
+        verbose_name = 'Pattern'
+        verbose_name_plural = 'Patterns'
 
-    nome = models.CharField(max_length=255)
+    nome = models.CharField(verbose_name='name', max_length=255)
     aliase = models.TextField()
-    contexto = models.TextField()
-    problema = models.TextField()
-    vantagens = models.TextField()
-    desvantagens = models.TextField()
-    aplicabilidade = models.TextField()
-    referencias = models.TextField(verbose_name='referências')
-    padroesRelacionados = models.ManyToManyField("self", blank=True, related_name='padroes', verbose_name=u'padrões relacionados')
-    tipoDePadrao = models.ForeignKey(TipoPadrao, related_name='tipoDePadrao_set', verbose_name='tipo de padrão')
-    imagem = models.ImageField(upload_to="fotos", blank=True)
-    cliques = models.IntegerField(editable=False, default=0)
-    categorias = models.ManyToManyField("TagPadrao", blank=False, related_name='tags')
+    contexto = models.TextField(verbose_name='context')
+    problema = models.TextField(verbose_name='problem')
+    vantagens = models.TextField(verbose_name='advantages')
+    desvantagens = models.TextField(verbose_name='drawbacks')
+    aplicabilidade = models.TextField(verbose_name='applicability')
+    referencias = models.TextField(verbose_name='references')
+    padroesRelacionados = models.ManyToManyField("self", blank=True, related_name='patterns', verbose_name=u'related patterns')
+    tipoDePadrao = models.ForeignKey(TypePattern, related_name='tipoDePadrao_set', verbose_name='type of pattern')
+    imagem = models.ImageField(verbose_name='image', upload_to="fotos", blank=True)
 
     def __unicode__(self):
         return '%s' % self.nome
-
-        #@permalink
-        #def get_absolute_url(self):
-        #    return ('view_nome', None, { 'nome': self.id })
-
-    @permalink
-    def get_absolute_url(self):
-        return ('view_padrao', None, { 'id': self.id })
-
 
 # --------------------------------------------------------------------------------------
 
 TIPO_ESTADO = (
-            ('Sugerido', 'Sugerido'),
-            ('Revisado', 'Revisado'),
-            ('Aprovado', 'Aprovado'),
-            ('Rejeitado', 'Rejeitado')
+            ('Suggested', 'Suggested'),
+            ('Reviewed', 'Reviewed'),
+            ('Approved', 'Approved'),
+            ('Reject', 'Reject')
 )
 
-class Decisao(models.Model):
+class Decision(models.Model):
 
     class Meta:
-        verbose_name = 'Decisão'
-        verbose_name_plural = 'Decisões'
+        verbose_name = 'Decision'
+        verbose_name_plural = 'Decisions'
 
-    nome = models.CharField(max_length=255)
-    descricao = models.TextField(verbose_name='descrição')
-    objetivo = models.TextField()
-    motivacao = models.TextField(verbose_name='motivação')
-    tipoDeDecisao = models.ForeignKey(TipoDecisao, related_name='tipoDeDecisao_set', verbose_name='tipo de decisão')
-    escopo = models.TextField()
-    hipoteses = models.TextField(verbose_name='hipóteses')
-    restricoes = models.TextField(verbose_name='restrições')
-    alternativas = models.TextField()
-    implicacoes = models.TextField(verbose_name='implicações')
-    decisaoRelacionada = models.ManyToManyField("self", blank=True, related_name='decisoes', verbose_name=u'decisões relacionadas')
-    necessidades = models.TextField()
-    notas = models.TextField()
-    estado = models.CharField(max_length=20, choices=TIPO_ESTADO)
-    categorias = models.ManyToManyField("TagDecisao", blank=False, related_name='tag_set')
-    padraoUtilizado = models.ManyToManyField("Padrao", blank=True, related_name='padroes', verbose_name=u'padrão utilizado')
-    cliques = models.IntegerField(editable=False, default=0)
-
-    def pesquisaDecisao(pesquisa):
-        decisoes = models.Decisao.objects.all(headline_contains=pesquisa);
-        return decisoes
-
-    def __unicode__(self):
-        return '%s' % self.nome
-
-    @permalink
-    def get_absolute_url(self):
-        return ('view_decisao', None, { 'id': self.id })
-
-class TagDecisao(models.Model):
-
-    class Meta:
-        verbose_name = 'Tag de Decisão'
-        verbose_name_plural = 'Tags de Decisão'
-
-    nome = models.CharField(max_length=255)
-
-    def __unicode__(self):
-        return '%s' % self.nome
-
-class TagPadrao(models.Model):
-
-    class Meta:
-        verbose_name = 'Tag de Padrão'
-        verbose_name_plural = 'Tags de Padrão'
-
-    nome = models.CharField(max_length=255)
+    nome = models.CharField(verbose_name='name', max_length=255)
+    descricao = models.TextField(verbose_name='description')
+    objetivo = models.TextField(verbose_name='goal')
+    motivacao = models.TextField(verbose_name='motivation')
+    tipoDeDecisao = models.ForeignKey(TypeDecision, related_name='tipoDeDecisao_set', verbose_name='type of decision')
+    escopo = models.TextField(verbose_name='scope')
+    hipoteses = models.TextField(verbose_name='hypothesis')
+    restricoes = models.TextField(verbose_name='restrictions')
+    alternativas = models.TextField(verbose_name='alternatives')
+    implicacoes = models.TextField(verbose_name='implication')
+    decisaoRelacionada = models.ManyToManyField("self", blank=True, related_name='decisions', verbose_name=u'decisões relacionadas')
+    necessidades = models.TextField(verbose_name='necessity')
+    notas = models.TextField(verbose_name='annotations')
+    estado = models.CharField(verbose_name='state', max_length=20, choices=TIPO_ESTADO)
+    padraoUtilizado = models.ManyToManyField("Pattern", blank=True, related_name='patterns', verbose_name=u'used pattern')
 
     def __unicode__(self):
         return '%s' % self.nome

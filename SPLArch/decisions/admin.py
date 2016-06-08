@@ -1,27 +1,19 @@
 from django.contrib import admin
-from SPLArch.decisions.models import TipoPadrao, TipoDecisao, Padrao, Decisao, TagDecisao, TagPadrao
+from SPLArch.decisions.models import Decision, Pattern, TypeDecision, TypePattern
 
-class TipoPadraoAdmin(admin.ModelAdmin):
+class TypePatternAdmin(admin.ModelAdmin):
     pass
 
-class TipoDecisaoAdmin(admin.ModelAdmin):
+class TypeDecisionAdmin(admin.ModelAdmin):
     pass
 
-class PadraoAdmin(admin.ModelAdmin):
-     filter_horizontal = ('padroesRelacionados','categorias')
+class PatternAdmin(admin.ModelAdmin):
+     filter_horizontal = ('padroesRelacionados',)
 
-class DecisaoAdmin(admin.ModelAdmin):
-    filter_horizontal = ('decisaoRelacionada','categorias','padraoUtilizado')
+class DecisionAdmin(admin.ModelAdmin):
+    filter_horizontal = ('decisaoRelacionada', 'padraoUtilizado')
 
-class TagDecisaoAdmin(admin.ModelAdmin):
-    pass
-
-class TagPadraoAdmin(admin.ModelAdmin):
-    pass
-
-admin.site.register(TipoPadrao)
-admin.site.register(TipoDecisao)
-admin.site.register(Padrao, PadraoAdmin)
-admin.site.register(Decisao, DecisaoAdmin)
-admin.site.register(TagDecisao)
-admin.site.register(TagPadrao)
+admin.site.register(TypePattern)
+admin.site.register(TypeDecision)
+admin.site.register(Pattern, PatternAdmin)
+admin.site.register(Decision, DecisionAdmin)
