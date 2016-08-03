@@ -209,7 +209,7 @@ class DDSAdminInline(admin.TabularInline):
 
 class DSSAAdmin(admin.ModelAdmin):
     form = DSSAForm
-    fields = ["name", "introduction", "references", "technology", "requirements",]
+    fields = ["name", "introduction", "references", "technology", "requirements","projects",]
     filter_horizontal = ("references", "technology","requirements",)
     inlines = [DDSAdminInline]
 

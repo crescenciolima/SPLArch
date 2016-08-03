@@ -1,0 +1,59 @@
+{% extends 'tbase.html' %}
+{% load staticfiles %}
+
+{% block cabecalho %}
+
+<link rel="stylesheet" href="{% static "adminlte/bootstrap/css/bootstrap.min.css" %}">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="{% static "adminlte/dist/css/AdminLTE.min.css" %}">
+
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="{% static "adminlte/dist/css/skins/_all-skins.min.css" %}">
+
+<!-- iCheck -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/iCheck/flat/blue.css" %}">
+
+<!-- Morris chart -->
+
+<!-- jvectormap -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+
+<!-- Date Picker -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+<link rel="stylesheet" href="{% static "adminlte/plugins/datepicker/datepicker3.css" %}">
+
+<!-- Daterange picker -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/daterangepicker/daterangepicker-bs3.css" %}">
+
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" %}">
+
+<link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
+
+<title>Show Techonology</title>
+
+{% endblock %}
+{% block corpo %}
+
+<form class="form-signin" action="" method="POST">
+    {% csrf_token %}
+      <h2 class="form-signin-heading" style="text-align: center;">Show Technology</h2>
+      <br />
+      <input id="id_title" name="title" type="text" disabled
+    class="form-control" placeholder="API" value="{{ technology.api.name }}"
+    >
+
+    <input id="id_name" name="name" type="text" disabled
+    class="form-control" placeholder="Description" value="{{ technology.description }}"
+    required>
+
+
+    <hr/>
+</form>
+
+{% endblock %}

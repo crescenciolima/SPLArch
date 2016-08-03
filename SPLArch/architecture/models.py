@@ -6,6 +6,7 @@ from django.contrib.auth.models import *
 from django.core import urlresolvers
 from django.contrib.contenttypes.models import ContentType
 from SPLArch.architecture.util import render_to_latex
+from SPLArch.scoping.models import *
 
 
 PRIORITY = (
@@ -53,6 +54,7 @@ class DDSA(models.Model):
     technology = models.ManyToManyField('Technology')
     quality_attribute_priority = models.ManyToManyField('QualityScenarios', through='QualityAttributePriority')
     requirements = models.ManyToManyField(Requirement,)
+    projects = models.OneToOneField(Project)
 
     def __unicode__(self):
         return self.name

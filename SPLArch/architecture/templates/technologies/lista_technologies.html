@@ -3,7 +3,8 @@
 
 {% block cabecalho %}
     <link rel="stylesheet" href="{% static "adminlte/bootstrap/css/bootstrap.min.css" %}">
-	<!-- Font Awesome -->
+
+  <!-- Font Awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!-- Ionicons -->
 	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -35,51 +36,49 @@
     <link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
 
 
-<title>Cadastro de References</title>
+<title>Technologies</title>
 
 {% endblock %}
 {% block corpo %}
                   <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Data Table With Full Features</h3>
+                  <h3 class="box-title">All Technologies</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                      <th>Title</th>
-                      <th>Author</th>
-                      <th>Publisher</th>
-                      <th>Usages</th>
+                      <th>API</th>
+                      <th>Description</th>
                       <th>Show</th>
                       <th>New</th>
                       </tr>
                     </thead>
                     <tbody>
-                     {% for reference in references %}
+                     {% for tec in technologies %}
                       <tr>
-                    <td>{{reference.title}}</td>
-                    <td>{{reference.author}}</td>
-                    <td>{{reference.publisher}}</td>
-                    <td>{{ api.cliques }} </td>
-                    <td><a href="{% url 'show_references' reference.id %}"><i class="fa fa-check text-navy"></i></a></td>
-                    <td><a href="{% url 'cadastrar_api' reference.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
+                    <td>{{tec.api.name}}</td>
+                    <td>{{tec.description}}</td>
+                    <td><a href="{% url 'show_technologies' tec.id %}"><i class="fa fa-check text-navy"></i></a></td>
+                    <td><a href="{% url 'cadastrar_technologies' %}"><i class="fa fa-check text-navy"></i></a></td></tr>
+
                       </tr>
                     {% endfor %}
                     </tbody>
                     <tfoot>
                       <tr>
-                      <th>Name</th>
-                      <th>Version</th>
-                      <th>Specification</th>
-                      <th>Usages</th>
+                      <th>API</th>
+                      <th>Description</th>
                       <th>Show</th>
                       <th>New</th>
+
                       </tr>
                     </tfoot>
                   </table>
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
+    <a href="{% url 'cadastrar_technologies' %}"> <button type="button" class="btn btn-primary">New Technology</button> </a>
+
   {% endblock %}
   <script>
 	        $(document).ready(function(){

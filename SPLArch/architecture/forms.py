@@ -15,7 +15,6 @@ class ApiForm(forms.ModelForm):
                 self.cleaned_data[field] = self.cleaned_data[field].strip()
         return self.cleaned_data
 
-
 class ReferencesForm(forms.ModelForm):
     #pages = CharField(widget=TextInput(attrs={'type':'number', 'required': ''}))
     #number = CharField(widget=TextInput(attrs={'type':'number'}))

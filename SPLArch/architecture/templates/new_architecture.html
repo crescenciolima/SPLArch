@@ -37,49 +37,79 @@ folder instead of downloading all of them to reduce the load. -->
 
 <link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
 
-<title>Show API</title>
+<title>New Architecture</title>
+
 
 {% endblock %}
 {% block corpo %}
+            				<div id="tabsleft" class="tabbable tabs-left">
+					<ul>
+					  	<li><a href="#tabsleft-tab1" data-toggle="tab">API</a></li>
+						<li><a href="#tabsleft-tab2" data-toggle="tab">References</a></li>
+						<li><a href="#tabsleft-tab3" data-toggle="tab">Quality Scenarios</a></li>
+					</ul>
+                    <div id="bar" class="progress progress-info progress-striped">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                    </div>
+                                	<form class="form-signin" action="cadastro/arch" method="POST">
+	    {% csrf_token %}
+					<div class="tab-content">
+					    <div class="tab-pane" id="tabsleft-tab1">
 
-<div class="col-lg-12">
-<div class="ibox float-e-margins">
+        <h2 class="form-signin-heading" style="text-align: center;">New API</h2>
+        <br />
 
-    <div class="ibox-content">
+			<input id="id_name" name="name" type="text"
+			class="form-control" placeholder="Name" value=""
+			required>
 
-        <div id="wizard">
-            <h1>First Step</h1>
-            <div class="step-content">
-                <div class="text-center m-t-md">
-                <h2>Hello in Step 1</h2>
-                <p>
-                    This is the first content.
-                </p>
-                </div>
-            </div>
+        	<input id="id_version" name="version" type="text"
+			class="form-control" placeholder="Version" value=""
+			required>
 
-            <h1>Second Step</h1>
-            <div class="step-content">
-                <div class="text-center m-t-md">
-                    <h2>This is step 2</h2>
-                    <p>
-                        This content is diferent than the first one.
-                    </p>
-                </div>
-            </div>
+			<input id="id_specification" name="specification" type="text"
+			class="form-control" placeholder="Specification" value=""
+			required>
 
-            <h1>Third Step</h1>
-            <div class="step-content">
-                <div class="text-center m-t-md">
-                    <h2>This is step 3</h2>
-                    <p>
-                        This is last content.
-                    </p>
-                </div>
-            </div>
-        </div>
+			<hr/>
 
-    </div>
-</div>
-</div>
+					    </div>
+
+					    <div class="tab-pane" id="tabsleft-tab2">
+<h2 class="form-signin-heading" style="text-align: center;">New Reference</h2>
+      <br />
+      <input id="id_title" name="title" type="text" hidden
+    class="form-control" placeholder="Title" value="{{ reference.title }}"
+    >
+
+    <input id="id_name" name="name" type="text"
+    class="form-control" placeholder="Name" value="{{ reference.author }}"
+    required>
+
+        <input id="id_version" name="version" type="text"
+    class="form-control" placeholder="Version" value="{{ reference.publisher }}"
+    required>
+
+    <input id="id_specification" name="specification" type="text"
+    class="form-control" placeholder="Specification" value="{{ reference.publisher }}"
+    required>
+
+    <hr/>
+					    </div>
+						<div class="tab-pane" id="tabsleft-tab3">
+							3
+
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
+					    </div>
+                        </div>
+	</form>
+						<ul class="pager wizard">
+							<li class="previous first"><a href="javascript:;">First</a></li>
+							<li class="previous"><a href="javascript:;">Previous</a></li>
+							<li class="next last"><a href="javascript:;">Last</a></li>
+						  	<li class="next"><a href="javascript:;">Next</a></li>
+							<li class="next finish" style="display:none;" ><a href="javascript:;">Finish</a></li>
+						</ul>
+					</div>
+				</div>
 {% endblock %}

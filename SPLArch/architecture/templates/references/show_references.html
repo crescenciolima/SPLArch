@@ -35,17 +35,17 @@ folder instead of downloading all of them to reduce the load. -->
 
 <link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
 
-<title>Show API</title>
+<title>Show References</title>
 
 {% endblock %}
 {% block corpo %}
 
-<form class="form-signin" action="/cadastro/api" method="POST">
+<form class="form-signin" action="/cadastro/reference" method="POST">
     {% csrf_token %}
       <h2 class="form-signin-heading" style="text-align: center;">Show Reference</h2>
       <br />
-      <input id="id_cliques" name="cliques" type="text" hidden
-    class="form-control" placeholder="Cliques" value="{{ reference.title }}"
+      <input id="id_title" name="title" type="text" hidden
+    class="form-control" placeholder="Title" value="{{ reference.title }}"
     >
 
     <input id="id_name" name="name" type="text"
