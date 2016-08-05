@@ -39,7 +39,7 @@ class VariabilityGuidelines (models.Model):
 
     class Meta:
         verbose_name = 'Variability Item'
-        verbose_name_plural = 'Variability'
+        verbose_name_plural = 'Variability Guideline'
 
     def __unicode__(self):
         return self.stimulus
