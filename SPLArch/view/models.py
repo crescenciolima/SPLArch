@@ -24,6 +24,20 @@ class ViewPoint(models.Model):
     def __unicode__(self):
         return self.name
 
+class VariabilityGuidelines (models.Model):
+    stimulus = models.CharField(max_length=100)
+    reaction = models.CharField(max_length=100)
+    strategy = models.CharField(max_length=100)
+    feature = models.CharField(max_length=100)
+    qualityAtributes = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name = 'Variability Item'
+        verbose_name_plural = 'Variability Guideline'
+
+    def __unicode__(self):
+        return self.stimulus
+
 class View (models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=100)
@@ -40,7 +54,7 @@ class View (models.Model):
     def __unicode__(self):
         return self.name
 
-class StructuralVision (models.Model):
+class StructuralView (models.Model):
     presentation = models.CharField(max_length=200)
     architectureStyle = models.CharField(max_length=200)
     modelDiagram = models.CharField(max_length=100)
@@ -55,7 +69,7 @@ class StructuralVision (models.Model):
     def __unicode__(self):
         return self.presentation
 
-class BehaviorVision (models.Model):
+class BehaviorView (models.Model):
     diagram = models.CharField(max_length=100)
     featuresRelated = models.ManyToManyField(Feature, related_name='Feature Behavior')
     sequenceDiagram = models.CharField(max_length=100)

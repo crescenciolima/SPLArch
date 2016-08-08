@@ -29,17 +29,3 @@ class Module(models.Model):
 
     def __unicode__(self):
         return self.name
-
-class VariabilityGuidelines (models.Model):
-    stimulus = models.CharField(max_length=100)
-    reaction = models.CharField(max_length=100)
-    strategy = models.CharField(max_length=100)
-    feature = models.CharField(max_length=100)
-    qualityAtributes = models.CharField(max_length=100)
-
-    class Meta:
-        verbose_name = 'Variability Item'
-        verbose_name_plural = 'Variability Guideline'
-
-    def __unicode__(self):
-        return self.stimulus
