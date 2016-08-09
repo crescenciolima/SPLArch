@@ -13,7 +13,7 @@ class ViewPoint(models.Model):
     relationship = models.CharField(max_length=100)
     property = models.CharField(max_length=100)
     restriction = models.CharField(max_length=100)
-    viewPointRelated = models.CharField(max_length=100)
+    viewPointRelated = models.ManyToManyField("self", blank=True)
 
     class Meta:
         verbose_name = 'View Point Item'
