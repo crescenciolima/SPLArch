@@ -40,7 +40,7 @@ class VariabilityGuidelines(models.Model):
     reaction = models.CharField(max_length=100)
     strategy = models.CharField(max_length=100)
     feature = models.CharField(max_length=100)
-    qualityAtributes = models.ManyToManyField(Quality, related_name='Quality Atributes Variability')
+    qualityAtributes = models.ManyToManyField(Quality, related_name='QualityOne')
 
     class Meta:
         verbose_name = 'Variability Item'
