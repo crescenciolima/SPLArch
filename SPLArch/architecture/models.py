@@ -25,6 +25,7 @@ class References(models.Model):
     number = models.IntegerField(max_length=4, blank=True)
     year = models.IntegerField(max_length=4)
     volume = models.IntegerField(max_length=4, blank=True)
+    cliques = models.IntegerField(editable=False, default=0)
 
     def __unicode__(self):
         return self.title

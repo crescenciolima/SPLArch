@@ -210,7 +210,7 @@ class DDSAdminInline(admin.TabularInline):
 class DSSAAdmin(admin.ModelAdmin):
     form = DSSAForm
     fields = ["name", "introduction", "references", "technology", "requirements","projects",]
-    filter_horizontal = ("references", "technology","requirements",)
+    filter_horizontal = ("references", "technology", "requirements",)
     inlines = [DDSAdminInline]
 
     def changelist_view(self, request, extra_context=None):

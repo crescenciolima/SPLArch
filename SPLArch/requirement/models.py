@@ -32,12 +32,8 @@ PRIORITY = (
 class PriorityRequirement(models.Model):
     name = models.CharField(max_length=200)
     level = models.IntegerField(max_length=10)
-
     def __unicode__(self):
         return self.name
-
-
-
 
 class RequirementType(models.Model):
     name = models.CharField(max_length=200)

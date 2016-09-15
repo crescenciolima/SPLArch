@@ -48,17 +48,35 @@ folder instead of downloading all of them to reduce the load. -->
     class="form-control" placeholder="Title" value="{{ reference.title }}"
     >
 
-    <input id="id_name" name="name" type="text"
-    class="form-control" placeholder="Name" value="{{ reference.author }}"
+    <input id="id_name" name="author" type="text"
+    class="form-control" placeholder="Author" value="{{ reference.author }}"
     required>
 
-        <input id="id_version" name="version" type="text"
-    class="form-control" placeholder="Version" value="{{ reference.publisher }}"
+            <input id="id_description" name="description" type="text"
+    class="form-control" placeholder="Description" value="{{ reference.description }}"
     required>
 
-    <input id="id_specification" name="specification" type="text"
-    class="form-control" placeholder="Specification" value="{{ reference.publisher }}"
+        <input id="id_publisher" name="publisher" type="text"
+    class="form-control" placeholder="Publisher" value="{{ reference.publisher }}"
     required>
+
+            <input id="id_pages" name="pages" type="text"
+    class="form-control" placeholder="Pages" value="{{ reference.pages }}"
+    required>
+
+                <input id="id_number" name="number" type="text"
+    class="form-control" placeholder="Number" value="{{ reference.number }}"
+    required>
+
+                <input id="id_year" name="year" type="text"
+    class="form-control" placeholder="Year" value="{{ reference.year }}"
+    required>
+
+    <input id="id_volume" name="volume" type="text"
+    class="form-control" placeholder="Volume" value="{{ reference.volume }}"
+    required>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
 
     <hr/>
 </form>

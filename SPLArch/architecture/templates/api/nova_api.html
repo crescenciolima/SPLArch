@@ -38,7 +38,7 @@
 
 	<form class="form-signin" action="/cadastro/api" method="POST">
 	    {% csrf_token %}
-        <h2 class="form-signin-heading" style="text-align: center;">Cadastrar API</h2>
+        <h2 class="form-signin-heading" style="text-align: center;">New API</h2>
         <br />
 
 			<input id="id_name" name="name" type="text"
@@ -54,7 +54,7 @@
 			required>
 
 			<hr/>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
 	</form>
 
 {% endblock %}
