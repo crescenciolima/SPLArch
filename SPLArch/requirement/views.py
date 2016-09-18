@@ -25,4 +25,26 @@ def cadastrarRequirement(request):
 
 
 def lista_requirement(request):
-    return render(request, 'requirement/lista_requirement.html', {'requirements': Requirement.objects.all})
+    return render(request, 'useCase/lista_useCase.html', {'uses': UseCase.objects.all})
+
+
+class CreateUseCase(CreateView):
+    template_name = './useCase/nova_useCase.html'
+    model = UseCase
+    success_url = reverse_lazy('useCase')
+
+def cadastrarUseCase(request):
+    if request.method == "POST":
+        form = UseCaseForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('/lista_useCases')
+    else:
+        form = UseCaseForm()
+
+    return render(request, "./references/cadastrar_references.html", {'form': form},
+                  context_instance=RequestContext(request))
+
+
+def lista_useCase(request):
+    return render(request, 'useCase/lista_useCase.html', {'uses': UseCase.objects.all})

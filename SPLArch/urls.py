@@ -4,7 +4,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from architecture import views
 from SPLArch.architecture.views import *
-from SPLArch.requirement.views import lista_requirement, CreateRequirement, cadastrarRequirement
+from SPLArch.requirement.views import lista_requirement, CreateRequirement, cadastrarRequirement, lista_useCase, CreateUseCase, cadastrarUseCase
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -54,6 +54,9 @@ urlpatterns = patterns('',
     url(r'^cadastro/requirement/', CreateRequirement.as_view(), name='cadastrar_requirement'),
     url(r'^cadastro/requirements', cadastrarRequirement),
 
+    url(r'^lista_useCases/', lista_useCase, name='useCase'),
+    url(r'^cadastro/useCase/', CreateUseCase.as_view(), name='cadastrar_useCase'),
+    url(r'^cadastro/useCases', cadastrarUseCase),
 
     url(r'^cadastro/technology/', CreateTechnologies.as_view(), name='cadastrar_technologies'),
     url(r'^cadastro/technologies', views.cadastrarTechnologie),
