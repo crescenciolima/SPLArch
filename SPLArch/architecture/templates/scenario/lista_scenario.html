@@ -36,39 +36,41 @@
     <link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
 
 
-<title>Technologies</title>
+<title>Cadastro de DSSA</title>
 
 {% endblock %}
 {% block corpo %}
                   <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">All Technologies</h3>
+                  <h3 class="box-title">Data Table With Full Features</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                      <th>API</th>
-                      <th>Description</th>
+                      <th>Name</th>
+                      <th>Stimulus</th>
+                      <th>Response</th>
                       <th>Show</th>
                       <th>New</th>
                       </tr>
                     </thead>
                     <tbody>
-                     {% for tec in technologies %}
+                     {% for sceario in scenarios %}
                       <tr>
-                    <td>{{tec.api.name}}</td>
-                    <td>{{tec.description}}</td>
-                    <td><a href="{% url 'show_technologies' tec.id %}"><i class="fa fa-check text-navy"></i></a></td>
-                    <td><a href="{% url 'cadastrar_technologies' %}"><i class="fa fa-check text-navy"></i></a></td></tr>
-
+                    <td>{{sceario.name}}</td>
+                    <td>{{sceario.stimulus}}</td>
+                    <td>{{sceario.response}}</td>
+                      <td>a</td>
+                      <td>b</td>
                       </tr>
                     {% endfor %}
                     </tbody>
                     <tfoot>
                       <tr>
-                      <th>API</th>
-                      <th>Description</th>
+                      <th>Name</th>
+                      <th>Stimulus</th>
+                      <th>Response</th>
                       <th>Show</th>
                       <th>New</th>
                       </tr>
@@ -76,7 +78,8 @@
                   </table>
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
-    <a href="{% url 'cadastrar_technologies' %}"> <button type="button" class="btn btn-primary">New Technology</button> </a>
+
+    <a href="{% url 'cadastrar_scenarios' %}"> <button type="button" class="btn btn-primary">New Scenario</button> </a>
 
   {% endblock %}
   <script>

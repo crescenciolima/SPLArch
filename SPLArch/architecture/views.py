@@ -10,6 +10,7 @@ from django.shortcuts import render_to_response
 from django.shortcuts import redirect
 from django.views.generic import CreateView, ListView
 from django.core.urlresolvers import reverse_lazy
+from SPLArch.component.models import *
 
 # example/app/views.py
 from django.shortcuts import render
@@ -61,10 +62,30 @@ def cadastrarApi(request):
 def lista_dssa(request):
     return render(request, 'dssa/lista_dssa.html', {'dssas': DDSA.objects.all})
 
+def lista_scenario(request):
+    return render(request, './scenario/lista_scenario.html', {'scenarios':Scenarios.objects.all})
+
 
 def lista_references(request):
     return render(request, './references/lista_references.html', {'references': References.objects.all})
 
+
+class CreateScenario(CreateView):
+    template_name = './scenario/nova_scenario.html'
+    model = Scenarios
+    success_url = reverse_lazy('scenarios')
+
+def cadastrarScenario(request):
+    if request.method == "POST":
+        form = ScenariosForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('/lista_scenarios')
+    else:
+        form = ScenariosForm()
+
+    return render(request, "./references/cadastrar_references.html", {'form': form},
+                  context_instance=RequestContext(request))
 
 def reference(request, reference_id):
     reference = References.objects.get(id=reference_id)
@@ -91,7 +112,7 @@ class CreateDSSA(CreateView):
 
 def cadastrarDSSA(request):
     if request.method == "POST":
-        form = ReferencesForm(request.POST, request.FILES)
+        form = DSSAForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('/lista_dssa')
@@ -103,7 +124,7 @@ def cadastrarDSSA(request):
 
 def cadastrarTechnologie(request):
     if request.method == "POST":
-        form = ReferencesForm(request.POST, request.FILES)
+        form = TechnologyForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('/lista_technologies')

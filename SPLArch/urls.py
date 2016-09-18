@@ -42,6 +42,12 @@ urlpatterns = patterns('',
     url(r'^show_references/(?P<reference_id>\d+)$', views.show_references, name='show_references'),
     url(r'^cadastro/references', views.cadastrarReference),
 
+    url(r'^lista_scenarios/', views.lista_scenario, name='scenarios'),
+    url(r'^cadastro/scenario/', CreateScenario.as_view(), name='cadastrar_scenarios'),
+    #url(r'^cadastrar_scenario/(?P<scenario_id>\d+)$', views.reference, name='cadastrar_reference'),
+    url(r'^show_references/(?P<reference_id>\d+)$', views.show_references, name='show_references'),
+    url(r'^cadastro/scenario', views.cadastrarScenario),
+
 
 
 
