@@ -1,5 +1,6 @@
 {% extends 'tbase.html' %}
 {% load staticfiles %}
+{% load bootstrap3 %}
 
 {% block cabecalho %}
 
@@ -44,7 +45,7 @@ folder instead of downloading all of them to reduce the load. -->
     {% csrf_token %}
       <h2 class="form-signin-heading" style="text-align: center;">New Technology</h2>
       <br />
-    {{ form.as_p }}
+    {% bootstrap_form form %}
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
 
