@@ -25,7 +25,7 @@ def cadastrarRequirement(request):
 
 
 def lista_requirement(request):
-    return render(request, 'useCase/lista_useCase.html', {'uses': UseCase.objects.all})
+    return render(request, 'requirement/lista_requirement.html', {'uses': Requirement.objects.all})
 
 
 class CreateUseCase(CreateView):

@@ -130,6 +130,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'admin_bootstrapped',
     'mptt',
+    'bootstrap3',
     'mptttreewidget',
     'SPLArch.architecture',
     'SPLArch.requirement',
