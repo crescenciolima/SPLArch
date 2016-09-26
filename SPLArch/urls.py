@@ -63,7 +63,9 @@ urlpatterns = patterns('',
     url(r'^lista_technologies/', views.lista_technologies, name='technologies'),
     url(r'^show_technology/(?P<technology_id>\d+)$', views.show_technology, name='show_technologies'),
 
-
+    url(r'^lista_featureBinding/', lista_featureBinding, name='featureBinding'),
+    url(r'^cadastro/useCase/', CreateUseCase.as_view(), name='cadastrar_useCase'),
+    url(r'^cadastro/useCases', cadastrarUseCase),
 
     url(r'^new_architecture/', views.new_architecture, name='new_architecture'),
     url(r'^cadastro/arch', views.cadastrarArc, name='cadastrarArc'),

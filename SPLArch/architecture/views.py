@@ -187,3 +187,7 @@ def new_architecture(request):
 
 def lista_technologies(request):
     return render(request, './technologies/lista_technologies.html', {'technologies': Technology.objects.all})
+
+
+def lista_featureBinding(request):
+    return render(request, './scoping/lista_featureBinding.html', {'uses': Feature.objects.all})

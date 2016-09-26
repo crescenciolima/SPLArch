@@ -51,6 +51,7 @@ class VariabilityGuidelines(models.Model):
 
 
 class View(models.Model):
+    file = models.FileField(upload_to='documents/view/%Y/%m/%d')
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=100)
     stakeholder = models.CharField(max_length=100)
@@ -67,6 +68,7 @@ class View(models.Model):
 
 
 class StructuralView(models.Model):
+    file = models.FileField(upload_to='documents/structural/%Y/%m/%d')
     presentation = models.CharField(max_length=200)
     architectureStyle = models.CharField(max_length=200)
     model = models.ManyToManyField(Module)
@@ -82,6 +84,7 @@ class StructuralView(models.Model):
 
 
 class BehaviorView(models.Model):
+    file = models.FileField(upload_to='documents/behavior/%Y/%m/%d')
     featuresRelated = models.ManyToManyField(Feature, related_name='Feature Behavior')
     viewPointRelated = models.ManyToManyField(ViewPoint)
     variabilityGuidelines = models.ManyToManyField(VariabilityGuidelines, related_name='Variability Behavior')
