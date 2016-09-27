@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="724196d0-53eb-4d4f-8638-a2548ffbae00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/show_requirement.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/cadastrar_useCase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/show_useCase.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch.db_certo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch2.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch3.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch4.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch5.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch6.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch7.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch_.db" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch.db" afterPath="$PROJECT_DIR$/SPLArch.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/requirement/models.py" afterPath="$PROJECT_DIR$/SPLArch/requirement/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/requirement/views.py" afterPath="$PROJECT_DIR$/SPLArch/requirement/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/scoping/models.py" afterPath="$PROJECT_DIR$/SPLArch/scoping/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/urls.py" afterPath="$PROJECT_DIR$/SPLArch/urls.py" />
     </list>
     <ignored path="SPLArch.iws" />
@@ -68,8 +53,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPLArch/requirement/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+            <state relative-caret-position="451">
+              <caret line="32" column="89" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
               <folding>
                 <element signature="e#26#75#0" expanded="true" />
               </folding>
@@ -97,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lista_useCase.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lista_useCase.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+            <state relative-caret-position="537">
+              <caret line="64" column="55" selection-start-line="64" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="537">
-              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+              <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -140,8 +125,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPLArch/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="66" column="28" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="28" />
+            <state relative-caret-position="432">
+              <caret line="60" column="32" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="32" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -149,11 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cadastrar_requirement.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cadastrar_requirement.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="44" column="84" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="84" />
+            <state relative-caret-position="504">
+              <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -213,17 +198,17 @@
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html" />
         <option value="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/show_requirement.html" />
-        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/755fa087-4825-408c-97e1-fc8554a62f04/console_2.sql" />
         <option value="$PROJECT_DIR$/SPLArch/scoping/models.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/755fa087-4825-408c-97e1-fc8554a62f04/console_3.sql" />
         <option value="$PROJECT_DIR$/SPLArch/requirement/models.py" />
         <option value="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/show_useCase.html" />
-        <option value="$PROJECT_DIR$/SPLArch/requirement/views.py" />
-        <option value="$PROJECT_DIR$/SPLArch/urls.py" />
-        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html" />
         <option value="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/cadastrar_useCase.html" />
         <option value="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html" />
+        <option value="$PROJECT_DIR$/SPLArch/urls.py" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/views.py" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html" />
       </list>
     </option>
   </component>
@@ -1244,14 +1229,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="657">
@@ -1260,39 +1237,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="44" column="84" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
-          <folding>
-            <element signature="e#26#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="66" column="28" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1306,8 +1255,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+        <state relative-caret-position="537">
+          <caret line="64" column="55" selection-start-line="64" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="32" column="89" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
+          <folding>
+            <element signature="e#26#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
           <folding />
         </state>
       </provider>

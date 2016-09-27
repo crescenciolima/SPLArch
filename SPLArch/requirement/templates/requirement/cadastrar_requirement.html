@@ -40,12 +40,12 @@ folder instead of downloading all of them to reduce the load. -->
 {% endblock %}
 {% block corpo %}
 
-<form class="form-signin" action="/cadastro/technologies" method="POST">
+<form class="form-signin" action="/cadastro/requirements" method="POST">
     {% csrf_token %}
       <h2 class="form-signin-heading" style="text-align: center;">Create Requirement</h2>
       <br />
 
-    {% bootstrap_form form_technology %}
+    {% bootstrap_form form_requirement %}
 
             <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
 

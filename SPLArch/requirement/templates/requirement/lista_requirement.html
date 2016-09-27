@@ -63,7 +63,7 @@
                     <td>{{requirement.description}}</td>
                     <td>{{requirement.cliques}}</td>
                     <td><a href="{% url 'show_requirements' requirement.id %}"><i class="fa fa-check text-navy"></i></a></td>
-                      <td>b</td>
+                    <td><a href="{% url 'cadastrar_requirement' requirement.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
                       </tr>
                     {% endfor %}
                     </tbody>

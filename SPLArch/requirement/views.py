@@ -30,7 +30,7 @@ def requirement(request, requirement_id):
     cliques = form.cliques;
     form.cliques = cliques + 1
     form.save();
-    return render(request, './requirement/cadastrar_requirement.html', {"form_scenario": form_requirement})
+    return render(request, './requirement/cadastrar_requirement.html', {"form_requirement": form_requirement})
 
 def lista_requirement(request):
     return render(request, './requirement/lista_requirement.html', {'requirements': Requirement.objects.all})

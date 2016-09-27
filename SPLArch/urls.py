@@ -5,7 +5,7 @@ from django.contrib import admin
 from architecture import views
 from SPLArch.architecture.views import *
 from SPLArch.requirement.views import lista_requirement, CreateRequirement, cadastrarRequirement, \
-    lista_useCase, CreateUseCase, cadastrarUseCase, show_requirements, show_useCases, useCase
+    lista_useCase, CreateUseCase, cadastrarUseCase, show_requirements, show_useCases, useCase, requirement
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -59,7 +59,7 @@ urlpatterns = patterns('',
     url(r'^lista_requirements/', lista_requirement, name='requirements'),
     url(r'^cadastro/requirement/', CreateRequirement.as_view(), name='cadastrar_requirement'),
     url(r'^cadastro/requirements', cadastrarRequirement),
-     url(r'^cadastrar_requirement/(?P<requirement_id>\d+)$', views.scenario, name='cadastrar_scenario'),
+     url(r'^cadastrar_requirement/(?P<requirement_id>\d+)$', requirement, name='cadastrar_requirement'),
      url(r'^show_requirements/(?P<requirement_id>\d+)$', show_requirements, name='show_requirements'),
 
     url(r'^lista_useCases/', lista_useCase, name='useCase'),
