@@ -49,6 +49,8 @@ class Requirement(models.Model):
     requirement_type = models.ForeignKey('RequirementType')
     feature = models.ManyToManyField(Feature)
     priority = models.ForeignKey('PriorityRequirement')
+    cliques = models.IntegerField(editable=False, default=0)
+
 
     def __unicode__(self):
         return self.name
@@ -71,6 +73,7 @@ class Requirement(models.Model):
 
 
 class UseCase(models.Model):
+    cliques = models.IntegerField(editable=False, default=0)
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     precondition = models.TextField(max_length=200, blank=True,verbose_name="Pre-condition")

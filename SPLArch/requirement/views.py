@@ -6,6 +6,7 @@ from django.views.generic import CreateView
 from SPLArch.requirement.models import *
 from SPLArch.requirement.forms import *
 
+
 class CreateRequirement(CreateView):
     template_name = './requirement/nova_requirement.html'
     model = Requirement
@@ -23,10 +24,21 @@ def cadastrarRequirement(request):
     return render(request, "./references/cadastrar_references.html", {'form': form},
                   context_instance=RequestContext(request))
 
+def requirement(request, requirement_id):
+    form = Requirement.objects.get(id=requirement_id)
+    form_requirement = RequirementForm(instance = form)
+    cliques = form.cliques;
+    form.cliques = cliques + 1
+    form.save();
+    return render(request, './requirement/cadastrar_requirement.html', {"form_scenario": form_requirement})
 
 def lista_requirement(request):
-    return render(request, 'requirement/lista_requirement.html', {'uses': Requirement.objects.all})
+    return render(request, './requirement/lista_requirement.html', {'requirements': Requirement.objects.all})
 
+def show_requirements(request, requirement_id):
+    register = Requirement.objects.get(id=requirement_id)
+    register_form = RequirementForm(instance = register)
+    return render(request, './requirement/show_requirement.html', {"register_form": register_form})
 
 class CreateUseCase(CreateView):
     template_name = './useCase/nova_useCase.html'
@@ -48,3 +60,16 @@ def cadastrarUseCase(request):
 
 def lista_useCase(request):
     return render(request, 'useCase/lista_useCase.html', {'uses': UseCase.objects.all})
+
+def show_useCases(request, use_id):
+    register = UseCase.objects.get(id=use_id)
+    register_form = UseCaseForm(instance = register)
+    return render(request, './useCase/show_useCase.html', {"register_form": register_form})
+
+def useCase(request, use_id):
+    form = UseCase.objects.get(id=use_id)
+    form_useCase = UseCaseForm(instance = form)
+    cliques = form.cliques;
+    form.cliques = cliques + 1
+    form.save();
+    return render(request, './useCase/cadastrar_useCase.html', {"form_useCase": form_useCase})

@@ -4,7 +4,8 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from architecture import views
 from SPLArch.architecture.views import *
-from SPLArch.requirement.views import lista_requirement, CreateRequirement, cadastrarRequirement, lista_useCase, CreateUseCase, cadastrarUseCase
+from SPLArch.requirement.views import lista_requirement, CreateRequirement, cadastrarRequirement, \
+    lista_useCase, CreateUseCase, cadastrarUseCase, show_requirements, show_useCases, useCase
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -30,10 +31,10 @@ urlpatterns = patterns('',
     url(r'^cadastro/api', views.cadastrarApi, name='cadastro'),
 
 
-
     url(r'^lista_dssa/', views.lista_dssa, name='dssa'),
     url(r'^cadastro/dssa/', CreateDSSA.as_view(), name='cadastrar_dssa'),
     url(r'^cadastro/dssas', views.cadastrarDSSA),
+
 
    url(r'^cadastro/technology/', CreateTechnologies.as_view(), name='cadastrar_technologies'),
    url(r'^cadastro/technologies', views.cadastrarTechnologie),
@@ -58,15 +59,16 @@ urlpatterns = patterns('',
     url(r'^lista_requirements/', lista_requirement, name='requirements'),
     url(r'^cadastro/requirement/', CreateRequirement.as_view(), name='cadastrar_requirement'),
     url(r'^cadastro/requirements', cadastrarRequirement),
+     url(r'^cadastrar_requirement/(?P<requirement_id>\d+)$', views.scenario, name='cadastrar_scenario'),
+     url(r'^show_requirements/(?P<requirement_id>\d+)$', show_requirements, name='show_requirements'),
 
     url(r'^lista_useCases/', lista_useCase, name='useCase'),
     url(r'^cadastro/useCase/', CreateUseCase.as_view(), name='cadastrar_useCase'),
     url(r'^cadastro/useCases', cadastrarUseCase),
+    url(r'^cadastrar_useCase/(?P<use_id>\d+)$', useCase, name='cadastrar_useCase'),
+   url(r'^show_useCase/(?P<use_id>\d+)$', show_useCases, name='show_useCases'),
 
-
-    url(r'^lista_featureBinding/', lista_featureBinding, name='featureBinding'),
-    url(r'^cadastro/useCase/', CreateUseCase.as_view(), name='cadastrar_useCase'),
-    url(r'^cadastro/useCases', cadastrarUseCase),
+   url(r'^lista_featureBinding/', lista_featureBinding, name='featureBinding'),
 
     url(r'^new_architecture/', views.new_architecture, name='new_architecture'),
     url(r'^cadastro/arch', views.cadastrarArc, name='cadastrarArc'),

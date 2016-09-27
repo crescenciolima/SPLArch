@@ -2,10 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="724196d0-53eb-4d4f-8638-a2548ffbae00" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/show_requirement.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/cadastrar_useCase.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/show_useCase.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch.db_certo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch2.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch3.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch4.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch5.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch6.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch7.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SPLArch_.db" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch.db" afterPath="$PROJECT_DIR$/SPLArch.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html" afterPath="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html" afterPath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html" afterPath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/requirement/models.py" afterPath="$PROJECT_DIR$/SPLArch/requirement/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html" afterPath="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/requirement/views.py" afterPath="$PROJECT_DIR$/SPLArch/requirement/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/scoping/models.py" afterPath="$PROJECT_DIR$/SPLArch/scoping/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/urls.py" afterPath="$PROJECT_DIR$/SPLArch/urls.py" />
     </list>
     <ignored path="SPLArch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +56,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPLArch/architecture/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="123" column="36" selection-start-line="123" selection-start-column="36" selection-end-line="123" selection-end-column="36" />
+            <state relative-caret-position="307">
+              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="119" selection-end-column="98" />
               <folding>
                 <element signature="e#26#83#0" expanded="true" />
               </folding>
@@ -49,52 +65,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lista_technologies.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SPLArch/requirement/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show_technology.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/show_technology.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nova_technology.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/nova_technology.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lista_references.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/references/lista_references.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="52" column="29" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cadastrar_scenario.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/scenario/cadastrar_scenario.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="633">
+              <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+              <folding>
+                <element signature="e#26#75#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,11 +87,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lista_scenario.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html">
+      <file leaf-file-name="show_useCase.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/useCase/show_useCase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+            <state relative-caret-position="921">
+              <caret line="45" column="78" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lista_useCase.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lista_requirement.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lista_technologies.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="657">
+              <caret line="64" column="45" selection-start-line="64" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cadastrar_useCase.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/useCase/cadastrar_useCase.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -122,8 +140,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPLArch/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="31" />
+            <state relative-caret-position="729">
+              <caret line="66" column="28" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="28" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -131,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cadastrar_references.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/references/cadastrar_references.html">
+      <file leaf-file-name="cadastrar_requirement.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+            <state relative-caret-position="552">
+              <caret line="44" column="84" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -166,21 +184,17 @@
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/dssa/nova_technologie.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/dssa/lista_dssa.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/admin.py" />
-        <option value="$PROJECT_DIR$/SPLArch/requirement/models.py" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/references/lista_references.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/login.html" />
         <option value="$PROJECT_DIR$/SPLArch/component/views.py" />
         <option value="$PROJECT_DIR$/SPLArch/requirement/forms.py" />
         <option value="$PROJECT_DIR$/SPLArch/settings.py" />
-        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html" />
         <option value="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/nova_requirement.html" />
         <option value="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/nova_useCase.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/tbase.html" />
-        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/dssa/nova_dssa.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/references/nova_reference.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/nova_scenario.html" />
-        <option value="$PROJECT_DIR$/SPLArch/requirement/views.py" />
         <option value="$PROJECT_DIR$/SPLArch/component/models.py" />
         <option value="$PROJECT_DIR$/SPLArch/view/models.py" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/api/show_api.html" />
@@ -194,11 +208,22 @@
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/cadastrar_scenario.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/nova_technology.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/show_technology.html" />
-        <option value="$PROJECT_DIR$/SPLArch/urls.py" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/views.py" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/show_requirement.html" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/755fa087-4825-408c-97e1-fc8554a62f04/console_2.sql" />
+        <option value="$PROJECT_DIR$/SPLArch/scoping/models.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/755fa087-4825-408c-97e1-fc8554a62f04/console_3.sql" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/models.py" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/show_useCase.html" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/views.py" />
+        <option value="$PROJECT_DIR$/SPLArch/urls.py" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/cadastrar_useCase.html" />
+        <option value="$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html" />
       </list>
     </option>
   </component>
@@ -288,6 +313,76 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requirement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requirement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="useCase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requirement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requirement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -504,11 +599,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SPLArch/requirement/templates/useCase" />
+      <recent name="$PROJECT_DIR$/SPLArch/requirement/templates/requirement" />
       <recent name="$PROJECT_DIR$/SPLArch/architecture/templates/technologies" />
       <recent name="$PROJECT_DIR$/SPLArch/architecture/templates/scenario" />
       <recent name="$PROJECT_DIR$/SPLArch/architecture/templates/scoping/featureBinding" />
-      <recent name="$PROJECT_DIR$/SPLArch/requirement/templates" />
-      <recent name="$PROJECT_DIR$/SPLArch/requirement/templates/requirement" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.SPLArch">
@@ -831,62 +926,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SPLArch/view/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/view/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/component/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1049">
-          <caret line="241" column="98" selection-start-line="241" selection-start-column="98" selection-end-line="241" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/new_architecture.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/confirma.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../virtualenv/spla/lib/python2.7/site-packages/django/views/generic/base.py" />
     <entry file="file://$PROJECT_DIR$/SPLArch/architecture/tests.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -903,38 +942,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/tbase.html" />
-    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/nova_requirement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="132" column="17" selection-start-line="132" selection-start-column="17" selection-end-line="132" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="54" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="78" column="103" selection-start-line="78" selection-start-column="103" selection-end-line="78" selection-end-column="103" />
         </state>
       </provider>
     </entry>
@@ -967,14 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/scoping/featureBinding/lista_featureBinding.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -987,14 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/scoping/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -1087,14 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/755fa087-4825-408c-97e1-fc8554a62f04/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1143,38 +1130,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="123" column="36" selection-start-line="123" selection-start-column="36" selection-end-line="123" selection-end-column="36" />
-          <folding>
-            <element signature="e#26#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/references/cadastrar_references.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1187,18 +1146,168 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/nova_requirement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+        <state relative-caret-position="467">
+          <caret line="65" column="60" selection-start-line="65" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/show_requirement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="45" column="82" selection-start-line="45" selection-start-column="82" selection-end-line="45" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/755fa087-4825-408c-97e1-fc8554a62f04/console_2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="70" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/scoping/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/755fa087-4825-408c-97e1-fc8554a62f04/console_3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="70" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/scoping/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="114" column="46" selection-start-line="114" selection-start-column="46" selection-end-line="114" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-485">
+          <caret line="43" column="17" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/useCase/show_useCase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="921">
+          <caret line="45" column="78" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="119" selection-end-column="98" />
+          <folding>
+            <element signature="e#26#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/lista_requirement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+        <state relative-caret-position="657">
+          <caret line="64" column="45" selection-start-line="64" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/requirement/cadastrar_requirement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="44" column="84" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+          <folding>
+            <element signature="e#26#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/useCase/cadastrar_useCase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/requirement/templates/useCase/lista_useCase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
           <folding />
         </state>
       </provider>
