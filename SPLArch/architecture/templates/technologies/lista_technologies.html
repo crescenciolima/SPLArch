@@ -60,8 +60,7 @@
                     <td>{{tec.api.name}}</td>
                     <td>{{tec.description}}</td>
                     <td><a href="{% url 'show_technologies' tec.id %}"><i class="fa fa-check text-navy"></i></a></td>
-                    <td><a href="{% url 'cadastrar_technologies' %}"><i class="fa fa-check text-navy"></i></a></td></tr>
-
+                    <td><a href="{% url 'cadastrar_technology' tec.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
                       </tr>
                     {% endfor %}
                     </tbody>

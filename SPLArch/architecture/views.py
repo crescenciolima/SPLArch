@@ -47,7 +47,8 @@ def show_scenarios(request, scenario_id):
 
 def show_technology(request, technology_id):
     technology = Technology.objects.get(id=technology_id)
-    return render(request, './technologies/show_technology.html', {"technology": technology})
+    technology_form = TechnologyForm(instance = technology)
+    return render(request, './technologies/show_technology.html', {"technology_form": technology_form})
 
 def nova_api(request):
     return render(request, './api/nova_api.html')
@@ -117,6 +118,14 @@ def scenario(request, scenario_id):
     form.cliques = cliques + 1
     form.save();
     return render(request, './scenario/cadastrar_scenario.html', {"form_scenario": form_scenario})
+
+def technology(request, technology_id):
+    technology = Technology.objects.get(id=technology_id)
+    form_technology = TechnologyForm(instance = technology)
+    cliques = technology.cliques;
+    technology.cliques = cliques + 1
+    technology.save();
+    return render(request, './technologies/cadastrar_technology.html', {"form_technology": form_technology})
 
 class CreateReferences(CreateView):
     template_name = './references/nova_reference.html'

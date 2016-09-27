@@ -1,7 +1,6 @@
 {% extends 'tbase.html' %}
 {% load staticfiles %}
 {% load bootstrap3 %}
-
 {% block cabecalho %}
 
 <link rel="stylesheet" href="{% static "adminlte/bootstrap/css/bootstrap.min.css" %}">
@@ -36,16 +35,20 @@ folder instead of downloading all of them to reduce the load. -->
 
 <link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
 
-<title>Show Techonology</title>
+<title>Show References</title>
 
 {% endblock %}
 {% block corpo %}
 
-<form class="form-signin" action="" method="POST">
+<form class="form-signin" action="/cadastro/technologies" method="POST">
     {% csrf_token %}
-      <h2 class="form-signin-heading" style="text-align: center;">Show Technology</h2>
+      <h2 class="form-signin-heading" style="text-align: center;">Create Technology</h2>
       <br />
-    {% bootstrap_form technology_form %}
+
+    {% bootstrap_form form_technology %}
+
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
 
     <hr/>
 </form>

@@ -35,6 +35,11 @@ urlpatterns = patterns('',
     url(r'^cadastro/dssa/', CreateDSSA.as_view(), name='cadastrar_dssa'),
     url(r'^cadastro/dssas', views.cadastrarDSSA),
 
+   url(r'^cadastro/technology/', CreateTechnologies.as_view(), name='cadastrar_technologies'),
+   url(r'^cadastro/technologies', views.cadastrarTechnologie),
+   url(r'^lista_technologies/', views.lista_technologies, name='technologies'),
+   url(r'^cadastrar_technology/(?P<technology_id>\d+)$', views.technology, name='cadastrar_technology'),
+   url(r'^show_technology/(?P<technology_id>\d+)$', views.show_technology, name='show_technologies'),
 
 
     url(r'^lista_references/', views.lista_references, name='references'),
@@ -58,10 +63,6 @@ urlpatterns = patterns('',
     url(r'^cadastro/useCase/', CreateUseCase.as_view(), name='cadastrar_useCase'),
     url(r'^cadastro/useCases', cadastrarUseCase),
 
-    url(r'^cadastro/technology/', CreateTechnologies.as_view(), name='cadastrar_technologies'),
-    url(r'^cadastro/technologies', views.cadastrarTechnologie),
-    url(r'^lista_technologies/', views.lista_technologies, name='technologies'),
-    url(r'^show_technology/(?P<technology_id>\d+)$', views.show_technology, name='show_technologies'),
 
     url(r'^lista_featureBinding/', lista_featureBinding, name='featureBinding'),
     url(r'^cadastro/useCase/', CreateUseCase.as_view(), name='cadastrar_useCase'),
