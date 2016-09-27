@@ -32,8 +32,22 @@ def login(request):
 
 def show_api(request, api_id):
     api = API.objects.get(id=api_id)
-    return render(request, './api/show_api.html', {"api": api})
+    form_api = ApiForm(instance=api)
+    return render(request, './api/show_api.html', {"form_api": form_api})
 
+def show_references(request, reference_id):
+    reference = References.objects.get(id=reference_id)
+    reference_form = ReferencesForm(instance = reference)
+    return render(request, './references/show_references.html', {"reference_form": reference_form})
+
+def show_scenarios(request, scenario_id):
+    register = Scenarios.objects.get(id=scenario_id)
+    register_form = ScenariosForm(instance = register)
+    return render(request, './scenario/show_scenario.html', {"register_form": register_form})
+
+def show_technology(request, technology_id):
+    technology = Technology.objects.get(id=technology_id)
+    return render(request, './technologies/show_technology.html', {"technology": technology})
 
 def nova_api(request):
     return render(request, './api/nova_api.html')
@@ -41,10 +55,11 @@ def nova_api(request):
 
 def api(request, api_id):
     api = API.objects.get(id=api_id)
+    form_api = ApiForm(instance=api)
     cliques = api.cliques;
     api.cliques = cliques + 1;
     api.save();
-    return render(request, './api/cadastrar_api.html', {"api": api})
+    return render(request, './api/cadastrar_api.html', {"form_api": form_api})
 
 
 def cadastrarApi(request):
@@ -89,11 +104,19 @@ def cadastrarScenario(request):
 
 def reference(request, reference_id):
     reference = References.objects.get(id=reference_id)
+    form_reference = ReferencesForm(instance = reference)
     cliques = reference.cliques;
     reference.cliques = cliques + 1
     reference.save();
-    return render(request, './references/cadastrar_references.html', {"reference": reference})
+    return render(request, './references/cadastrar_references.html', {"form_reference": form_reference})
 
+def scenario(request, scenario_id):
+    form = Scenarios.objects.get(id=scenario_id)
+    form_scenario = ScenariosForm(instance = form)
+    cliques = form.cliques;
+    form.cliques = cliques + 1
+    form.save();
+    return render(request, './scenario/cadastrar_scenario.html', {"form_scenario": form_scenario})
 
 class CreateReferences(CreateView):
     template_name = './references/nova_reference.html'
@@ -146,17 +169,6 @@ def cadastrarReference(request):
 
     return render(request, "./references/cadastrar_references.html", {'form': form},
                   context_instance=RequestContext(request))
-
-
-def show_references(request, reference_id):
-    reference = References.objects.get(id=reference_id)
-    return render(request, './References/show_references.html', {"reference": reference})
-
-
-def show_technology(request, technology_id):
-    technology = Technology.objects.get(id=technology_id)
-    return render(request, './technologies/show_technology.html', {"technology": technology})
-
 
 def cad_architecture(request):
     if request.method == "POST":

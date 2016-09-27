@@ -1,5 +1,6 @@
 {% extends 'tbase.html' %}
 {% load staticfiles %}
+{% load bootstrap3 %}
 
 {% block cabecalho %}
 
@@ -44,37 +45,8 @@ folder instead of downloading all of them to reduce the load. -->
     {% csrf_token %}
       <h2 class="form-signin-heading" style="text-align: center;">Show Reference</h2>
       <br />
-      <input id="id_title" name="title" type="text" hidden
-    class="form-control" placeholder="Title" value="{{ reference.title }}"
-    >
+    {% bootstrap_form reference_form %}
 
-    <input id="id_name" name="author" type="text"
-    class="form-control" placeholder="Author" value="{{ reference.author }}"
-    required>
-
-            <input id="id_description" name="description" type="text"
-    class="form-control" placeholder="Description" value="{{ reference.description }}"
-    required>
-
-        <input id="id_publisher" name="publisher" type="text"
-    class="form-control" placeholder="Publisher" value="{{ reference.publisher }}"
-    required>
-
-            <input id="id_pages" name="pages" type="text"
-    class="form-control" placeholder="Pages" value="{{ reference.pages }}"
-    required>
-
-                <input id="id_number" name="number" type="text"
-    class="form-control" placeholder="Number" value="{{ reference.number }}"
-    required>
-
-                <input id="id_year" name="year" type="text"
-    class="form-control" placeholder="Year" value="{{ reference.year }}"
-    required>
-
-    <input id="id_volume" name="volume" type="text"
-    class="form-control" placeholder="Volume" value="{{ reference.volume }}"
-    required>
 
     <hr/>
 </form>

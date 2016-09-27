@@ -56,6 +56,8 @@ class DDSA(models.Model):
     quality_attribute_priority = models.ManyToManyField('QualityScenarios', through='QualityAttributePriority')
     requirements = models.ManyToManyField(Requirement,)
     projects = models.OneToOneField(Project)
+    cliques = models.IntegerField(editable=False, default=0)
+
 
     def __unicode__(self):
         return self.name
@@ -90,6 +92,8 @@ class QualityScenarioDocument(models.Model):
     introduction = models.TextField(blank=True)
     references = models.ManyToManyField('References')
     quality_scenarios = models.ManyToManyField('QualityScenarios')
+    cliques = models.IntegerField(editable=False, default=0)
+
 
     def __unicode__(self):
         return self.introduction
@@ -119,6 +123,8 @@ class Scenarios(models.Model):
     strategy = models.TextField(blank=True)
     feature = models.ManyToManyField(Feature)
     nf_requirement = models.ManyToManyField(Requirement)
+    cliques = models.IntegerField(editable=False, default=0)
+
 
     def __unicode__(self):
         return self.name
@@ -131,6 +137,8 @@ class QualityScenarios(models.Model):
     name = models.CharField(max_length=100)
     nf_requirement = models.ManyToManyField(Requirement)
     scenario = models.OneToOneField(Scenarios)
+    cliques = models.IntegerField(editable=False, default=0)
+
 
     def __unicode__(self):
         return self.name
@@ -143,6 +151,8 @@ class QualityScenarios(models.Model):
 class Technology(models.Model):
     api = models.ManyToManyField('API', verbose_name="API")
     description = models.TextField(blank=True)
+    cliques = models.IntegerField(editable=False, default=0)
+
 
     def __unicode__(self):
         return self.description
@@ -197,3 +207,4 @@ class Architecture(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(max_length=500)
     references = models.ManyToManyField('References', blank=True, symmetrical=False, related_name='mainsteps_funcspec')
+    cliques = models.IntegerField(editable=False, default=0)

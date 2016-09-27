@@ -56,13 +56,13 @@
                       </tr>
                     </thead>
                     <tbody>
-                     {% for sceario in scenarios %}
+                     {% for scenario in scenarios %}
                       <tr>
-                    <td>{{sceario.name}}</td>
-                    <td>{{sceario.stimulus}}</td>
-                    <td>{{sceario.response}}</td>
-                      <td>a</td>
-                      <td>b</td>
+                    <td>{{scenario.name}}</td>
+                    <td>{{scenario.stimulus}}</td>
+                    <td>{{scenario.response}}</td>
+                    <td><a href="{% url 'show_scenarios' scenario.id %}"><i class="fa fa-check text-navy"></i></a></td>
+                    <td><a href="{% url 'cadastrar_scenario' scenario.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
                       </tr>
                     {% endfor %}
                     </tbody>
