@@ -51,6 +51,7 @@
                       <th>Name</th>
                       <th>Stimulus</th>
                       <th>Response</th>
+                      <th>Usages</th>
                       <th>Show</th>
                       <th>New</th>
                       </tr>
@@ -61,6 +62,7 @@
                     <td>{{scenario.name}}</td>
                     <td>{{scenario.stimulus}}</td>
                     <td>{{scenario.response}}</td>
+                    <td>{{scenario.cliques}}</td>
                     <td><a href="{% url 'show_scenarios' scenario.id %}"><i class="fa fa-check text-navy"></i></a></td>
                     <td><a href="{% url 'cadastrar_scenario' scenario.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
                       </tr>

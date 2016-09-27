@@ -50,6 +50,7 @@
                       <tr>
                       <th>API</th>
                       <th>Description</th>
+                      <th>Usages</th>
                       <th>Show</th>
                       <th>New</th>
                       </tr>
@@ -59,6 +60,7 @@
                       <tr>
                     <td>{{tec.api.name}}</td>
                     <td>{{tec.description}}</td>
+                    <td>{{tec.cliques}}</td>
                     <td><a href="{% url 'show_technologies' tec.id %}"><i class="fa fa-check text-navy"></i></a></td>
                     <td><a href="{% url 'cadastrar_technology' tec.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
                       </tr>

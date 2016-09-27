@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="724196d0-53eb-4d4f-8638-a2548ffbae00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch.db" afterPath="$PROJECT_DIR$/SPLArch.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html" afterPath="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html" afterPath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html" afterPath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/nova_technology.html" afterPath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/nova_technology.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/show_technology.html" afterPath="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/show_technology.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/views.py" afterPath="$PROJECT_DIR$/SPLArch/architecture/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/urls.py" afterPath="$PROJECT_DIR$/SPLArch/urls.py" />
     </list>
     <ignored path="SPLArch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lista_technologies.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lista_technologies.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="537">
-              <caret line="62" column="66" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
+              <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -83,6 +79,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="lista_references.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/references/lista_references.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="52" column="29" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="cadastrar_scenario.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/scenario/cadastrar_scenario.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,21 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cadastrar_technology.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cadastrar_technology.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="44" column="83" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show_scenario.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/scenario/show_scenario.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="15" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="624">
+              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -116,8 +112,8 @@
       <file leaf-file-name="lista_scenario.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="64" column="51" selection-start-line="64" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="539">
+              <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -195,14 +191,14 @@
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/show_scenario.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/models.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/755fa087-4825-408c-97e1-fc8554a62f04/console_1.sql" />
-        <option value="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/cadastrar_scenario.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/nova_technology.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/show_technology.html" />
         <option value="$PROJECT_DIR$/SPLArch/urls.py" />
-        <option value="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/views.py" />
         <option value="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html" />
+        <option value="$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html" />
+        <option value="$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html" />
       </list>
     </option>
   </component>
@@ -358,6 +354,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="technologies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SPLArch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="architecture" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scoping" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1065,14 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/references/lista_references.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="65" column="81" selection-start-line="65" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/architecture/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -1129,22 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="64" column="51" selection-start-line="64" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="62" column="66" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/architecture/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
@@ -1175,8 +1173,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/cadastrar_technology.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="44" column="83" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
+        <state relative-caret-position="624">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/references/lista_references.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="52" column="29" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/scenario/lista_scenario.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SPLArch/architecture/templates/technologies/lista_technologies.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
           <folding />
         </state>
       </provider>
