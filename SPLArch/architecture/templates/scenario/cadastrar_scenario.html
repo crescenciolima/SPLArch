@@ -40,9 +40,9 @@ folder instead of downloading all of them to reduce the load. -->
 {% endblock %}
 {% block corpo %}
 
-<form class="form-signin" action="/cadastro/references" method="POST">
+<form class="form-signin" action="/cadastro/scenario" method="POST">
     {% csrf_token %}
-      <h2 class="form-signin-heading" style="text-align: center;">Create Reference</h2>
+      <h2 class="form-signin-heading" style="text-align: center;">Create Scenario</h2>
       <br />
 
     {% bootstrap_form form_scenario %}
