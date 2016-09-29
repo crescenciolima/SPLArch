@@ -81,12 +81,23 @@ urlpatterns = patterns('',
    url(r'^cadastrar_requirement/(?P<requirement_id>\d+)$', requirement, name='cadastrar_requirement'),
    url(r'^show_requirements/(?P<requirement_id>\d+)$', show_requirements, name='show_requirements'),
 
-####
    url(r'^lista_project/', lista_project, name='project'),
    url(r'^cadastro/project/', CreateProject.as_view(), name='cadastrar_project'),
    url(r'^cadastro/projects', cadastrarProject),
    url(r'^cadastrar_project/(?P<project_id>\d+)$', project, name='cadastrar_project'),
    url(r'^show_project/(?P<project_id>\d+)$', show_project, name='show_project'),
+
+   url(r'^lista_product/', lista_product, name='product'),
+   url(r'^cadastro/products/', CreateProduct.as_view(), name='cadastrar_product'),
+   url(r'^cadastro/products', cadastrarProduct),
+   url(r'^cadastrar_product/(?P<product_id>\d+)$', product, name='cadastrar_product'),
+   url(r'^show_product/(?P<product_id>\d+)$', show_product, name='show_product'),
+
+   url(r'^lista_binding/', lista_binding, name='binding'),
+   url(r'^cadastro/bindings/', CreateBinding.as_view(), name='cadastrar_binding'),
+   url(r'^cadastro/bindings', cadastrarBinding),
+   url(r'^cadastrar_binding/(?P<binding_id>\d+)$', binding, name='cadastrar_binding'),
+   url(r'^show_binding/(?P<binding_id>\d+)$', show_binding, name='show_binding'),
 
     url(r'^new_architecture/', cad_Arc, name='new_architecture'),
     url(r'^cadastro/arch', views.cadastrarArc, name='cadastrarArc'),

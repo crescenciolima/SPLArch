@@ -1,0 +1,56 @@
+{% extends 'tbase.html' %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+{% block cabecalho %}
+
+<link rel="stylesheet" href="{% static "adminlte/bootstrap/css/bootstrap.min.css" %}">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="{% static "adminlte/dist/css/AdminLTE.min.css" %}">
+
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="{% static "adminlte/dist/css/skins/_all-skins.min.css" %}">
+
+<!-- iCheck -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/iCheck/flat/blue.css" %}">
+
+<!-- Morris chart -->
+
+<!-- jvectormap -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+
+<!-- Date Picker -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+<link rel="stylesheet" href="{% static "adminlte/plugins/datepicker/datepicker3.css" %}">
+
+<!-- Daterange picker -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/daterangepicker/daterangepicker-bs3.css" %}">
+
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" %}">
+
+<link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
+
+<title>Show References</title>
+
+{% endblock %}
+{% block corpo %}
+
+<form class="form-signin" action="/cadastro/products" method="POST">
+    {% csrf_token %}
+      <h2 class="form-signin-heading" style="text-align: center;">Create Product</h2>
+      <br />
+
+    {% bootstrap_form form_product %}
+
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+
+    <hr/>
+</form>
+
+{% endblock %}

@@ -112,3 +112,72 @@ class CreateProject(CreateView):
     template_name = './project/nova_project.html'
     model = Project
     success_url = reverse_lazy('project')
+
+
+
+def lista_product(request):
+    return render(request, './product/lista_product.html', {'product': Product.objects.all})
+
+def show_product(request, product_id):
+    form = Product.objects.get(id=product_id)
+    form_product = ProductForm(instance=form)
+    return render(request, './product/show_product.html', {"form_product": form_product})
+
+def product(request, product_id):
+    product = Product.objects.get(id=product_id)
+    form_product = ProductForm(instance=product)
+    cliques = product.cliques;
+    product.cliques = cliques + 1;
+    product.save();
+    return render(request, './product/cadastrar_product.html', {"form_product": form_product})
+
+def cadastrarProduct(request):
+    if request.method == "POST":
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('/lista_product')
+    else:
+        form = ProductForm()
+
+    return render(request, "./product/cadastrar_product.html", {'form': form},
+                  context_instance=RequestContext(request))
+
+class CreateProduct(CreateView):
+    template_name = './product/nova_product.html'
+    model = Product
+    success_url = reverse_lazy('product')
+
+
+def lista_binding(request):
+    return render(request, './binding/lista_binding.html', {'binding': BindingTime.objects.all})
+
+def show_binding(request, binding_id):
+    form = BindingTime.objects.get(id=binding_id)
+    form_binding = BindingForm(instance=form)
+    return render(request, './binding/show_binding.html', {"form_binding": form_binding})
+
+def binding(request, binding_id):
+    binding = BindingTime.objects.get(id=binding_id)
+    form_binding = BindingForm(instance=binding)
+    cliques = binding.cliques;
+    binding.cliques = cliques + 1;
+    binding.save();
+    return render(request, './binding/cadastrar_binding.html', {"form_binding": form_binding})
+
+def cadastrarBinding(request):
+    if request.method == "POST":
+        form = BindingForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('/lista_binding')
+    else:
+        form = BindingForm()
+
+    return render(request, "./binding/cadastrar_binding.html", {'form': form},
+                  context_instance=RequestContext(request))
+
+class CreateBinding(CreateView):
+    template_name = './binding/nova_binding.html'
+    model = BindingTime
+    success_url = reverse_lazy('binding')
