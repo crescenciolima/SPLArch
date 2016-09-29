@@ -6,6 +6,7 @@ from architecture import views
 from SPLArch.architecture.views import *
 from SPLArch.requirement.views import lista_requirement, CreateRequirement, cadastrarRequirement, \
     lista_useCase, CreateUseCase, cadastrarUseCase, show_requirements, show_useCases, useCase, requirement
+from SPLArch.scoping.views import *
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -62,15 +63,32 @@ urlpatterns = patterns('',
      url(r'^cadastrar_requirement/(?P<requirement_id>\d+)$', requirement, name='cadastrar_requirement'),
      url(r'^show_requirements/(?P<requirement_id>\d+)$', show_requirements, name='show_requirements'),
 
-    url(r'^lista_useCases/', lista_useCase, name='useCase'),
-    url(r'^cadastro/useCase/', CreateUseCase.as_view(), name='cadastrar_useCase'),
-    url(r'^cadastro/useCases', cadastrarUseCase),
-    url(r'^cadastrar_useCase/(?P<use_id>\d+)$', useCase, name='cadastrar_useCase'),
-   url(r'^show_useCase/(?P<use_id>\d+)$', show_useCases, name='show_useCases'),
+    url(r'^lista_features/', lista_feature, name='features'),
+    url(r'^cadastro/feature/', CreateFeature.as_view(), name='cadastrar_feature'),
+    url(r'^cadastro/features', cadastrarFeature),
+    url(r'^cadastrar_feature/(?P<feature_id>\d+)$', feature, name='cadastrar_feature'),
+   url(r'^show_feature/(?P<feature_id>\d+)$', show_feature, name='show_feature'),
 
-   url(r'^lista_featureBinding/', lista_featureBinding, name='featureBinding'),
+   url(r'^lista_glossary/', lista_glossary, name='glossary'),
+   url(r'^cadastro/glossary/', CreateGlossary.as_view(), name='cadastrar_glossary'),
+   url(r'^cadastro/glossarys', cadastrarGlossary),
+   url(r'^cadastrar_glossary/(?P<glossary_id>\d+)$', glossary, name='cadastrar_glossary'),
+   url(r'^show_glossary/(?P<glossary_id>\d+)$', show_glossary, name='show_glossary'),
 
-    url(r'^new_architecture/', views.new_architecture, name='new_architecture'),
+   url(r'^lista_requirements/', lista_requirement, name='requirements'),
+   url(r'^cadastro/requirement/', CreateRequirement.as_view(), name='cadastrar_requirement'),
+   url(r'^cadastro/requirements', cadastrarRequirement),
+   url(r'^cadastrar_requirement/(?P<requirement_id>\d+)$', requirement, name='cadastrar_requirement'),
+   url(r'^show_requirements/(?P<requirement_id>\d+)$', show_requirements, name='show_requirements'),
+
+####
+   url(r'^lista_project/', lista_project, name='project'),
+   url(r'^cadastro/project/', CreateProject.as_view(), name='cadastrar_project'),
+   url(r'^cadastro/projects', cadastrarProject),
+   url(r'^cadastrar_project/(?P<project_id>\d+)$', project, name='cadastrar_project'),
+   url(r'^show_project/(?P<project_id>\d+)$', show_project, name='show_project'),
+
+    url(r'^new_architecture/', cad_Arc, name='new_architecture'),
     url(r'^cadastro/arch', views.cadastrarArc, name='cadastrarArc'),
 
 

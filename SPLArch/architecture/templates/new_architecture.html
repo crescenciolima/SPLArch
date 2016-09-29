@@ -1,5 +1,6 @@
 {% extends 'tbase.html' %}
 {% load staticfiles %}
+{% load bootstrap3 %}
 
 {% block cabecalho %}
 
@@ -59,17 +60,8 @@ folder instead of downloading all of them to reduce the load. -->
         <h2 class="form-signin-heading" style="text-align: center;">New API</h2>
         <br />
 
-			<input id="id_name" name="name" type="text"
-			class="form-control" placeholder="Name" value=""
-			required>
+    {% bootstrap_form form_technology %}
 
-        	<input id="id_version" name="version" type="text"
-			class="form-control" placeholder="Version" value=""
-			required>
-
-			<input id="id_specification" name="specification" type="text"
-			class="form-control" placeholder="Specification" value=""
-			required>
 
 			<hr/>
 

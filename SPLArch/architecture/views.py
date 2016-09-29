@@ -201,9 +201,10 @@ def cadastrarArc(request):
     return render(request, "new_architecture.html", {'form': form}, context_instance=RequestContext(request))
 
 
-def new_architecture(request):
-    return render(request, 'new_architecture.html', {'apis': API.objects.filter().order_by('-cliques').distinct(),
-                                                     'references': References.objects.all})
+def cad_Arc(request):
+    form_technology = TechnologyForm()
+    form_api = ApiForm()
+    return render(request, './new_architecture.html', {"form_technology": form_technology})
 
 
 def lista_technologies(request):
