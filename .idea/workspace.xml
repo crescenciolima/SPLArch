@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="724196d0-53eb-4d4f-8638-a2548ffbae00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/features/cadastrar_features.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/features/lista_feature.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/features/nova_feature.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/features/show_features.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/glossary/cadastrar_glossary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/glossary/lista_glossary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/glossary/nova_glossary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/glossary/show_glossary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/project/cadastrar_project.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/project/nova_project.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/project/show_project.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/SPLArch/architecture/templates/scoping/featureBinding/lista_featureBinding.html" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/project/lista_project.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch.db" afterPath="$PROJECT_DIR$/SPLArch.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/2016/09/26/cur-gti8-0001-16.pdf" afterPath="$PROJECT_DIR$/documents/2016/09/26/cur-gti8-0001-16.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/behavior/2016/09/26/cur-gti8-0001-16.pdf" afterPath="$PROJECT_DIR$/documents/behavior/2016/09/26/cur-gti8-0001-16.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/755fa087-4825-408c-97e1-fc8554a62f04.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/755fa087-4825-408c-97e1-fc8554a62f04.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/templates/new_architecture.html" afterPath="$PROJECT_DIR$/SPLArch/architecture/templates/new_architecture.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/architecture/views.py" afterPath="$PROJECT_DIR$/SPLArch/architecture/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/scoping/views.py" afterPath="$PROJECT_DIR$/SPLArch/scoping/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/urls.py" afterPath="$PROJECT_DIR$/SPLArch/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SPLArch/scoping/templates/project/lista_project.html" afterPath="$PROJECT_DIR$/SPLArch/scoping/templates/project/lista_project.html" />
     </list>
     <ignored path="SPLArch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,8 +49,8 @@
       <file leaf-file-name="lista_project.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SPLArch/scoping/templates/project/lista_project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+            <state relative-caret-position="600">
+              <caret line="71" column="38" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -1188,8 +1165,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SPLArch/scoping/templates/project/lista_project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+        <state relative-caret-position="600">
+          <caret line="71" column="38" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
           <folding />
         </state>
       </provider>
