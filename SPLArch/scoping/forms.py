@@ -19,9 +19,9 @@ class ProductMapForm(ModelForm):
         return self.cleaned_data
 
 
-class RequirementForm(forms.ModelForm):
+class ProductForm(forms.ModelForm):
     class Meta:
-        model = Requirement
+        model = Product
 
     def clean(self):
         for field in self.cleaned_data:
@@ -55,6 +55,16 @@ class ProjectForm(forms.ModelForm):
 class FeatureForm(forms.ModelForm):
     class Meta:
         model = Feature
+
+    def clean(self):
+        for field in self.cleaned_data:
+            if isinstance(self.cleaned_data[field], basestring):
+                self.cleaned_data[field] = self.cleaned_data[field].strip()
+        return self.cleaned_data
+
+class BindingForm(forms.ModelForm):
+    class Meta:
+        model = BindingTime
 
     def clean(self):
         for field in self.cleaned_data:

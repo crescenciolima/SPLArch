@@ -1,0 +1,2450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Sqlite (Xerial) - SPLArch.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+    <schema id="1">
+      <visible>1</visible>
+    </schema>
+    <table id="2" parent="1" name="architecture_api"/>
+    <table id="3" parent="1" name="architecture_architecture"/>
+    <table id="4" parent="1" name="architecture_architecture_references"/>
+    <table id="5" parent="1" name="architecture_ddsa"/>
+    <table id="6" parent="1" name="architecture_ddsa_references"/>
+    <table id="7" parent="1" name="architecture_ddsa_requirements"/>
+    <table id="8" parent="1" name="architecture_ddsa_technology"/>
+    <table id="9" parent="1" name="architecture_qualityattributepriority"/>
+    <table id="10" parent="1" name="architecture_qualityscenariodocument"/>
+    <table id="11" parent="1" name="architecture_qualityscenariodocument_quality_scenarios"/>
+    <table id="12" parent="1" name="architecture_qualityscenariodocument_references"/>
+    <table id="13" parent="1" name="architecture_qualityscenarios"/>
+    <table id="14" parent="1" name="architecture_qualityscenarios_nf_requirement"/>
+    <table id="15" parent="1" name="architecture_references"/>
+    <table id="16" parent="1" name="architecture_scenarios"/>
+    <table id="17" parent="1" name="architecture_scenarios_feature"/>
+    <table id="18" parent="1" name="architecture_scenarios_nf_requirement"/>
+    <table id="19" parent="1" name="architecture_technology"/>
+    <table id="20" parent="1" name="architecture_technology_api"/>
+    <table id="21" parent="1" name="auth_group"/>
+    <table id="22" parent="1" name="auth_group_permissions"/>
+    <table id="23" parent="1" name="auth_permission"/>
+    <table id="24" parent="1" name="auth_user"/>
+    <table id="25" parent="1" name="auth_user_groups"/>
+    <table id="26" parent="1" name="auth_user_user_permissions"/>
+    <table id="27" parent="1" name="component_components"/>
+    <table id="28" parent="1" name="component_components_features"/>
+    <table id="29" parent="1" name="component_components_modules"/>
+    <table id="30" parent="1" name="component_module"/>
+    <table id="31" parent="1" name="component_module_features"/>
+    <table id="32" parent="1" name="django_admin_log"/>
+    <table id="33" parent="1" name="django_content_type"/>
+    <table id="34" parent="1" name="django_session"/>
+    <table id="35" parent="1" name="django_site"/>
+    <table id="36" parent="1" name="faq_question"/>
+    <table id="37" parent="1" name="faq_topic"/>
+    <table id="38" parent="1" name="requirement_alternativesteps"/>
+    <table id="39" parent="1" name="requirement_mainsteps"/>
+    <table id="40" parent="1" name="requirement_priorityrequirement"/>
+    <table id="41" parent="1" name="requirement_requirement"/>
+    <table id="42" parent="1" name="requirement_requirement_feature"/>
+    <table id="43" parent="1" name="requirement_requirementtype"/>
+    <table id="44" parent="1" name="requirement_usecase"/>
+    <table id="45" parent="1" name="requirement_usecase_alternativeSteps"/>
+    <table id="46" parent="1" name="requirement_usecase_f_requirements"/>
+    <table id="47" parent="1" name="requirement_usecase_feature"/>
+    <table id="48" parent="1" name="requirement_usecase_mainSteps"/>
+    <table id="49" parent="1" name="requirement_usecase_owner"/>
+    <table id="50" parent="1" name="scoping_bindingtime"/>
+    <table id="51" parent="1" name="scoping_feature"/>
+    <table id="52" parent="1" name="scoping_feature_excludes"/>
+    <table id="53" parent="1" name="scoping_feature_glossary"/>
+    <table id="54" parent="1" name="scoping_feature_requires"/>
+    <table id="55" parent="1" name="scoping_glossary"/>
+    <table id="56" parent="1" name="scoping_product"/>
+    <table id="57" parent="1" name="scoping_product_features"/>
+    <table id="58" parent="1" name="scoping_project"/>
+    <table id="59" parent="1" name="scoping_project_product"/>
+    <table id="60" parent="1" name="view_behaviorview"/>
+    <table id="61" parent="1" name="view_behaviorview_featuresRelated"/>
+    <table id="62" parent="1" name="view_behaviorview_variabilityGuidelines"/>
+    <table id="63" parent="1" name="view_behaviorview_viewPointRelated"/>
+    <table id="64" parent="1" name="view_quality"/>
+    <table id="65" parent="1" name="view_structuralview"/>
+    <table id="66" parent="1" name="view_structuralview_model"/>
+    <table id="67" parent="1" name="view_structuralview_variabilityGuidelines"/>
+    <table id="68" parent="1" name="view_structuralview_viewPointRelated"/>
+    <table id="69" parent="1" name="view_variabilityguidelines"/>
+    <table id="70" parent="1" name="view_variabilityguidelines_qualityAtributes"/>
+    <table id="71" parent="1" name="view_view"/>
+    <table id="72" parent="1" name="view_view_variabilityGuidelines"/>
+    <table id="73" parent="1" name="view_view_viewPointRelated"/>
+    <table id="74" parent="1" name="view_viewpoint"/>
+    <table id="75" parent="1" name="view_viewpoint_viewPointRelated"/>
+    <column id="76" parent="2" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="77" parent="2" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="78" parent="2" name="version">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="79" parent="2" name="specification">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="80" parent="2" name="cliques">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="81" parent="2">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="82" parent="3" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="83" parent="3" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="84" parent="3" name="description">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="85" parent="3" name="cliques">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="86" parent="3">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="87" parent="4" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="88" parent="4" name="architecture_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="89" parent="4" name="references_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="90" parent="4" name="sqlite_autoindex_architecture_architecture_references_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>architecture_id
+references_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="91" parent="4" name="architecture_architecture_references_2a29e96d">
+      <columns>architecture_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="92" parent="4">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="93" parent="4" name="#FAKE_architecture_architecture_references_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>references_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.architecture_references.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="94" parent="5" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="95" parent="5" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="96" parent="5" name="introduction">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="97" parent="5" name="projects_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="98" parent="5" name="cliques">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="99" parent="5" name="sqlite_autoindex_architecture_ddsa_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>projects_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="100" parent="5">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="101" parent="6" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="102" parent="6" name="ddsa_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="103" parent="6" name="references_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="104" parent="6" name="sqlite_autoindex_architecture_ddsa_references_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>ddsa_id
+references_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="105" parent="6" name="architecture_ddsa_references_461a2c9e">
+      <columns>ddsa_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="106" parent="6">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="107" parent="6" name="#FAKE_architecture_ddsa_references_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>references_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.architecture_references.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="108" parent="7" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="109" parent="7" name="ddsa_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="110" parent="7" name="requirement_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="111" parent="7" name="sqlite_autoindex_architecture_ddsa_requirements_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>ddsa_id
+requirement_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="112" parent="7" name="architecture_ddsa_requirements_461a2c9e">
+      <columns>ddsa_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="113" parent="7" name="architecture_ddsa_requirements_19c1813d">
+      <columns>requirement_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="114" parent="7">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="115" parent="8" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="116" parent="8" name="ddsa_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="117" parent="8" name="technology_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="118" parent="8" name="sqlite_autoindex_architecture_ddsa_technology_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>ddsa_id
+technology_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="119" parent="8" name="architecture_ddsa_technology_461a2c9e">
+      <columns>ddsa_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="120" parent="8" name="architecture_ddsa_technology_98427941">
+      <columns>technology_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="121" parent="8">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="122" parent="9" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="123" parent="9" name="add_scenarios_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="124" parent="9" name="dssa_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="125" parent="9" name="priority">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(64)(0,-1)|12</data-type>
+    </column>
+    <index id="126" parent="9" name="architecture_qualityattributepriority_91132340">
+      <columns>add_scenarios_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="127" parent="9">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="128" parent="9" name="#FAKE_architecture_qualityattributepriority_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>dssa_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.architecture_ddsa.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="129" parent="10" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="130" parent="10" name="introduction">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="131" parent="10" name="cliques">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="132" parent="10">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="133" parent="11" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="134" parent="11" name="qualityscenariodocument_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="135" parent="11" name="qualityscenarios_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="136" parent="11" name="sqlite_autoindex_architecture_qualityscenariodocument_quality_scenarios_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>qualityscenariodocument_id
+qualityscenarios_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="137" parent="11" name="architecture_qualityscenariodocument_quality_scenarios_90206130">
+      <columns>qualityscenariodocument_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="138" parent="11" name="architecture_qualityscenariodocument_quality_scenarios_a9d88efe">
+      <columns>qualityscenarios_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="139" parent="11">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="140" parent="12" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="141" parent="12" name="qualityscenariodocument_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="142" parent="12" name="references_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="143" parent="12" name="sqlite_autoindex_architecture_qualityscenariodocument_references_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>qualityscenariodocument_id
+references_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="144" parent="12" name="architecture_qualityscenariodocument_references_90206130">
+      <columns>qualityscenariodocument_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="145" parent="12">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="146" parent="12" name="#FAKE_architecture_qualityscenariodocument_references_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>references_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.architecture_references.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="147" parent="13" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="148" parent="13" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="149" parent="13" name="scenario_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="150" parent="13" name="cliques">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="151" parent="13">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="152" parent="13" name="#FAKE_architecture_qualityscenarios_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>scenario_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.architecture_scenarios.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="153" parent="14" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="154" parent="14" name="qualityscenarios_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="155" parent="14" name="requirement_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="156" parent="14" name="sqlite_autoindex_architecture_qualityscenarios_nf_requirement_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>qualityscenarios_id
+requirement_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="157" parent="14" name="architecture_qualityscenarios_nf_requirement_a9d88efe">
+      <columns>qualityscenarios_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="158" parent="14" name="architecture_qualityscenarios_nf_requirement_19c1813d">
+      <columns>requirement_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="159" parent="14">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="160" parent="15" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="161" parent="15" name="title">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="162" parent="15" name="author">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="163" parent="15" name="description">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="164" parent="15" name="publisher">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="165" parent="15" name="pages">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(7)(0,-1)|12</data-type>
+    </column>
+    <column id="166" parent="15" name="number">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="167" parent="15" name="year">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="168" parent="15" name="volume">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="169" parent="15" name="cliques">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="170" parent="15">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="171" parent="16" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="172" parent="16" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="173" parent="16" name="stimulus">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="174" parent="16" name="response">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="175" parent="16" name="strategy">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="176" parent="16" name="cliques">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="177" parent="16">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="178" parent="17" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="179" parent="17" name="scenarios_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="180" parent="17" name="feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="181" parent="17" name="sqlite_autoindex_architecture_scenarios_feature_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>scenarios_id
+feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="182" parent="17" name="architecture_scenarios_feature_41756fb3">
+      <columns>scenarios_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="183" parent="17" name="architecture_scenarios_feature_27b2b2cf">
+      <columns>feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="184" parent="17">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="185" parent="18" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="186" parent="18" name="scenarios_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="187" parent="18" name="requirement_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="188" parent="18" name="sqlite_autoindex_architecture_scenarios_nf_requirement_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>scenarios_id
+requirement_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="189" parent="18" name="architecture_scenarios_nf_requirement_41756fb3">
+      <columns>scenarios_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="190" parent="18" name="architecture_scenarios_nf_requirement_19c1813d">
+      <columns>requirement_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="191" parent="18">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="192" parent="19" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="193" parent="19" name="description">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="194" parent="19" name="cliques">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="195" parent="19">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="196" parent="20" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="197" parent="20" name="technology_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="198" parent="20" name="api_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="199" parent="20" name="sqlite_autoindex_architecture_technology_api_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>technology_id
+api_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="200" parent="20" name="architecture_technology_api_98427941">
+      <columns>technology_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="201" parent="20" name="architecture_technology_api_7ccc1f96">
+      <columns>api_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="202" parent="20">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="203" parent="21" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="204" parent="21" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(80)(0,-1)|12</data-type>
+    </column>
+    <index id="205" parent="21" name="sqlite_autoindex_auth_group_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="206" parent="21">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="207" parent="22" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="208" parent="22" name="group_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="209" parent="22" name="permission_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="210" parent="22" name="sqlite_autoindex_auth_group_permissions_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>group_id
+permission_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="211" parent="22" name="auth_group_permissions_5f412f9a">
+      <columns>group_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="212" parent="22">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="213" parent="22" name="#FAKE_auth_group_permissions_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>permission_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.auth_permission.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="214" parent="23" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="215" parent="23" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(50)(0,-1)|12</data-type>
+    </column>
+    <column id="216" parent="23" name="content_type_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="217" parent="23" name="codename">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <index id="218" parent="23" name="sqlite_autoindex_auth_permission_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>content_type_id
+codename</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="219" parent="23" name="auth_permission_37ef4eb4">
+      <columns>content_type_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="220" parent="23">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="221" parent="24" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="222" parent="24" name="password">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(128)(0,-1)|12</data-type>
+    </column>
+    <column id="223" parent="24" name="last_login">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="224" parent="24" name="is_superuser">
+      <mandatory>1</mandatory>
+      <data-type>BOOL(0,-1)|4</data-type>
+    </column>
+    <column id="225" parent="24" name="username">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(30)(0,-1)|12</data-type>
+    </column>
+    <column id="226" parent="24" name="first_name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(30)(0,-1)|12</data-type>
+    </column>
+    <column id="227" parent="24" name="last_name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(30)(0,-1)|12</data-type>
+    </column>
+    <column id="228" parent="24" name="email">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(75)(0,-1)|12</data-type>
+    </column>
+    <column id="229" parent="24" name="is_staff">
+      <mandatory>1</mandatory>
+      <data-type>BOOL(0,-1)|4</data-type>
+    </column>
+    <column id="230" parent="24" name="is_active">
+      <mandatory>1</mandatory>
+      <data-type>BOOL(0,-1)|4</data-type>
+    </column>
+    <column id="231" parent="24" name="date_joined">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <index id="232" parent="24" name="sqlite_autoindex_auth_user_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>username</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="233" parent="24">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="234" parent="25" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="235" parent="25" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="236" parent="25" name="group_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="237" parent="25" name="sqlite_autoindex_auth_user_groups_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>user_id
+group_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="238" parent="25" name="auth_user_groups_6340c63c">
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="239" parent="25">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="240" parent="25" name="#FAKE_auth_user_groups_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>group_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.auth_group.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="241" parent="26" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="242" parent="26" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="243" parent="26" name="permission_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="244" parent="26" name="sqlite_autoindex_auth_user_user_permissions_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>user_id
+permission_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="245" parent="26" name="auth_user_user_permissions_6340c63c">
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="246" parent="26">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="247" parent="26" name="#FAKE_auth_user_user_permissions_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>permission_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.auth_permission.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="248" parent="27" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="249" parent="27" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="250" parent="27" name="description">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="251" parent="27" name="variabilityGuidelines">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <key id="252" parent="27">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="253" parent="28" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="254" parent="28" name="components_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="255" parent="28" name="feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="256" parent="28" name="sqlite_autoindex_component_components_features_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>components_id
+feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="257" parent="28" name="component_components_features_8490e85b">
+      <columns>components_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="258" parent="28">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="259" parent="28" name="#FAKE_component_components_features_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>feature_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.scoping_feature.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="260" parent="29" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="261" parent="29" name="components_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="262" parent="29" name="module_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="263" parent="29" name="sqlite_autoindex_component_components_modules_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>components_id
+module_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="264" parent="29" name="component_components_modules_8490e85b">
+      <columns>components_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="265" parent="29" name="component_components_modules_421d176e">
+      <columns>module_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="266" parent="29">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="267" parent="30" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="268" parent="30" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="269" parent="30" name="description">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <key id="270" parent="30">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="271" parent="31" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="272" parent="31" name="module_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="273" parent="31" name="feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="274" parent="31" name="sqlite_autoindex_component_module_features_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>module_id
+feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="275" parent="31" name="component_module_features_421d176e">
+      <columns>module_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="276" parent="31">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="277" parent="31" name="#FAKE_component_module_features_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>feature_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.scoping_feature.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="278" parent="32" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="279" parent="32" name="action_time">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="280" parent="32" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="281" parent="32" name="content_type_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="282" parent="32" name="object_id">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="283" parent="32" name="object_repr">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="284" parent="32" name="action_flag">
+      <mandatory>1</mandatory>
+      <data-type>SMALLINT UNSIGNED(0,-1)|4</data-type>
+    </column>
+    <column id="285" parent="32" name="change_message">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="286" parent="32">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="287" parent="32" name="#FAKE_django_admin_log_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>user_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.auth_user.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="288" parent="32" name="#FAKE_django_admin_log_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>content_type_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.django_content_type.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="289" parent="33" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="290" parent="33" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="291" parent="33" name="app_label">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="292" parent="33" name="model">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <index id="293" parent="33" name="sqlite_autoindex_django_content_type_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>app_label
+model</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="294" parent="33">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="295" parent="34" name="session_key">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(40)(0,-1)|12</data-type>
+    </column>
+    <column id="296" parent="34" name="session_data">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="297" parent="34" name="expire_date">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <index id="298" parent="34" name="django_session_b7b81f0c">
+      <columns>expire_date</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="299" parent="34">
+      <columns>session_key</columns>
+      <primary>1</primary>
+    </key>
+    <column id="300" parent="35" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="301" parent="35" name="domain">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="302" parent="35" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(50)(0,-1)|12</data-type>
+    </column>
+    <key id="303" parent="35">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="304" parent="36" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="305" parent="36" name="text">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="306" parent="36" name="answer">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="307" parent="36" name="topic_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="308" parent="36" name="slug">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="309" parent="36" name="status">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="310" parent="36" name="protected">
+      <mandatory>1</mandatory>
+      <data-type>BOOL(0,-1)|4</data-type>
+    </column>
+    <column id="311" parent="36" name="sort_order">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="312" parent="36" name="created_on">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="313" parent="36" name="updated_on">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
+    </column>
+    <column id="314" parent="36" name="created_by_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="315" parent="36" name="updated_by_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="316" parent="36" name="faq_question_f52cfca0">
+      <columns>slug</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="317" parent="36">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="318" parent="36" name="#FAKE_faq_question_3">
+      <name-surrogate>1</name-surrogate>
+      <columns>topic_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.faq_topic.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="319" parent="36" name="#FAKE_faq_question_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>created_by_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.auth_user.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="320" parent="36" name="#FAKE_faq_question_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>updated_by_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.auth_user.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="321" parent="37" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="322" parent="37" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(150)(0,-1)|12</data-type>
+    </column>
+    <column id="323" parent="37" name="slug">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(150)(0,-1)|12</data-type>
+    </column>
+    <column id="324" parent="37" name="sort_order">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="325" parent="37" name="faq_topic_f52cfca0">
+      <columns>slug</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="326" parent="37">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="327" parent="38" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="328" parent="38" name="use_case_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="329" parent="38" name="user_action">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="330" parent="38" name="system_response">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="331" parent="38">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="332" parent="38" name="#FAKE_requirement_alternativesteps_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>use_case_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.requirement_usecase.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="333" parent="39" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="334" parent="39" name="use_case_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="335" parent="39" name="user_action">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="336" parent="39" name="system_response">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="337" parent="39">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="338" parent="39" name="#FAKE_requirement_mainsteps_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>use_case_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.requirement_usecase.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="339" parent="40" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="340" parent="40" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="341" parent="40" name="level">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="342" parent="40">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="343" parent="41" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="344" parent="41" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="345" parent="41" name="description">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="346" parent="41" name="observations">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="347" parent="41" name="status_requirement_choices">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="348" parent="41" name="requirement_type_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="349" parent="41" name="priority_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="350" parent="41">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="351" parent="41" name="#FAKE_requirement_requirement_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>requirement_type_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.requirement_requirementtype.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="352" parent="41" name="#FAKE_requirement_requirement_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>priority_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.requirement_priorityrequirement.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="353" parent="42" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="354" parent="42" name="requirement_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="355" parent="42" name="feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="356" parent="42" name="sqlite_autoindex_requirement_requirement_feature_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>requirement_id
+feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="357" parent="42" name="requirement_requirement_feature_19c1813d">
+      <columns>requirement_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="358" parent="42" name="requirement_requirement_feature_27b2b2cf">
+      <columns>feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="359" parent="42">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="360" parent="43" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="361" parent="43" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <key id="362" parent="43">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="363" parent="44" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="364" parent="44" name="title">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="365" parent="44" name="description">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="366" parent="44" name="precondition">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="367" parent="44">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="368" parent="45" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="369" parent="45" name="usecase_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="370" parent="45" name="alternativesteps_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="371" parent="45" name="sqlite_autoindex_requirement_usecase_alternativeSteps_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>usecase_id
+alternativesteps_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="372" parent="45" name="requirement_usecase_alternativeSteps_cf1a3cb3">
+      <columns>usecase_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="373" parent="45" name="requirement_usecase_alternativeSteps_128a28d0">
+      <columns>alternativesteps_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="374" parent="45">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="375" parent="46" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="376" parent="46" name="usecase_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="377" parent="46" name="requirement_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="378" parent="46" name="sqlite_autoindex_requirement_usecase_f_requirements_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>usecase_id
+requirement_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="379" parent="46" name="requirement_usecase_f_requirements_cf1a3cb3">
+      <columns>usecase_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="380" parent="46">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="381" parent="46" name="#FAKE_requirement_usecase_f_requirements_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>requirement_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.requirement_requirement.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="382" parent="47" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="383" parent="47" name="usecase_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="384" parent="47" name="feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="385" parent="47" name="sqlite_autoindex_requirement_usecase_feature_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>usecase_id
+feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="386" parent="47" name="requirement_usecase_feature_cf1a3cb3">
+      <columns>usecase_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="387" parent="47" name="requirement_usecase_feature_27b2b2cf">
+      <columns>feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="388" parent="47">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="389" parent="48" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="390" parent="48" name="usecase_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="391" parent="48" name="mainsteps_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="392" parent="48" name="sqlite_autoindex_requirement_usecase_mainSteps_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>usecase_id
+mainsteps_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="393" parent="48" name="requirement_usecase_mainSteps_cf1a3cb3">
+      <columns>usecase_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="394" parent="48" name="requirement_usecase_mainSteps_2e0392ef">
+      <columns>mainsteps_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="395" parent="48">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="396" parent="49" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="397" parent="49" name="usecase_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="398" parent="49" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="399" parent="49" name="sqlite_autoindex_requirement_usecase_owner_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>usecase_id
+user_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="400" parent="49" name="requirement_usecase_owner_cf1a3cb3">
+      <columns>usecase_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="401" parent="49">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="402" parent="49" name="#FAKE_requirement_usecase_owner_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>user_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.auth_user.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="403" parent="50" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="404" parent="50" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="405" parent="50" name="description">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <index id="406" parent="50" name="sqlite_autoindex_scoping_bindingtime_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="407" parent="50">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="408" parent="51" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="409" parent="51" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="410" parent="51" name="description">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="411" parent="51" name="configuration">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="412" parent="51" name="variability">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(20)(0,-1)|12</data-type>
+    </column>
+    <column id="413" parent="51" name="type">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(20)(0,-1)|12</data-type>
+    </column>
+    <column id="414" parent="51" name="binding_time_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="415" parent="51" name="parent_id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="416" parent="51" name="lft">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER UNSIGNED(0,-1)|4</data-type>
+    </column>
+    <column id="417" parent="51" name="rght">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER UNSIGNED(0,-1)|4</data-type>
+    </column>
+    <column id="418" parent="51" name="tree_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER UNSIGNED(0,-1)|4</data-type>
+    </column>
+    <column id="419" parent="51" name="level">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER UNSIGNED(0,-1)|4</data-type>
+    </column>
+    <index id="420" parent="51" name="scoping_feature_410d0aac">
+      <columns>parent_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="421" parent="51" name="scoping_feature_329f6fb3">
+      <columns>lft</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="422" parent="51" name="scoping_feature_e763210f">
+      <columns>rght</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="423" parent="51" name="scoping_feature_ba470c4a">
+      <columns>tree_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="424" parent="51" name="scoping_feature_20e079f4">
+      <columns>level</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="425" parent="51">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="426" parent="51" name="#FAKE_scoping_feature_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>binding_time_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.scoping_bindingtime.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="427" parent="52" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="428" parent="52" name="from_feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="429" parent="52" name="to_feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="430" parent="52" name="sqlite_autoindex_scoping_feature_excludes_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>from_feature_id
+to_feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="431" parent="52" name="scoping_feature_excludes_312d0174">
+      <columns>from_feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="432" parent="52" name="scoping_feature_excludes_ef4cf76d">
+      <columns>to_feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="433" parent="52">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="434" parent="53" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="435" parent="53" name="feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="436" parent="53" name="glossary_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="437" parent="53" name="sqlite_autoindex_scoping_feature_glossary_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>feature_id
+glossary_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="438" parent="53" name="scoping_feature_glossary_27b2b2cf">
+      <columns>feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="439" parent="53" name="scoping_feature_glossary_b4df322e">
+      <columns>glossary_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="440" parent="53">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="441" parent="54" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="442" parent="54" name="from_feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="443" parent="54" name="to_feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="444" parent="54" name="sqlite_autoindex_scoping_feature_requires_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>from_feature_id
+to_feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="445" parent="54" name="scoping_feature_requires_312d0174">
+      <columns>from_feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="446" parent="54" name="scoping_feature_requires_ef4cf76d">
+      <columns>to_feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="447" parent="54">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="448" parent="55" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="449" parent="55" name="term">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="450" parent="55" name="definition">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="451" parent="55">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="452" parent="56" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="453" parent="56" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="454" parent="56" name="description">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="455" parent="56">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="456" parent="57" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="457" parent="57" name="product_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="458" parent="57" name="feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="459" parent="57" name="sqlite_autoindex_scoping_product_features_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>product_id
+feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="460" parent="57" name="scoping_product_features_7f1b40ad">
+      <columns>product_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="461" parent="57">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="462" parent="57" name="#FAKE_scoping_product_features_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>feature_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.scoping_feature.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="463" parent="58" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="464" parent="58" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="465" parent="58" name="description">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="466" parent="58">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="467" parent="59" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="468" parent="59" name="project_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="469" parent="59" name="product_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="470" parent="59" name="sqlite_autoindex_scoping_project_product_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>project_id
+product_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="471" parent="59" name="scoping_project_product_37952554">
+      <columns>project_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="472" parent="59">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="473" parent="59" name="#FAKE_scoping_project_product_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>product_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.scoping_product.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="474" parent="60" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="475" parent="60" name="file">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <key id="476" parent="60">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="477" parent="61" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="478" parent="61" name="behaviorview_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="479" parent="61" name="feature_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="480" parent="61" name="sqlite_autoindex_view_behaviorview_featuresRelated_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>behaviorview_id
+feature_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="481" parent="61" name="view_behaviorview_featuresRelated_0df314ad">
+      <columns>behaviorview_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="482" parent="61">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="483" parent="61" name="#FAKE_view_behaviorview_featuresRelated_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>feature_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.scoping_feature.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="484" parent="62" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="485" parent="62" name="behaviorview_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="486" parent="62" name="variabilityguidelines_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="487" parent="62" name="sqlite_autoindex_view_behaviorview_variabilityGuidelines_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>behaviorview_id
+variabilityguidelines_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="488" parent="62" name="view_behaviorview_variabilityGuidelines_0df314ad">
+      <columns>behaviorview_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="489" parent="62">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="490" parent="62" name="#FAKE_view_behaviorview_variabilityGuidelines_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>variabilityguidelines_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.view_variabilityguidelines.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="491" parent="63" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="492" parent="63" name="behaviorview_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="493" parent="63" name="viewpoint_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="494" parent="63" name="sqlite_autoindex_view_behaviorview_viewPointRelated_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>behaviorview_id
+viewpoint_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="495" parent="63" name="view_behaviorview_viewPointRelated_0df314ad">
+      <columns>behaviorview_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="496" parent="63">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="497" parent="63" name="#FAKE_view_behaviorview_viewPointRelated_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>viewpoint_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.view_viewpoint.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="498" parent="64" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="499" parent="64" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <key id="500" parent="64">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="501" parent="65" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="502" parent="65" name="file">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="503" parent="65" name="presentation">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <column id="504" parent="65" name="architectureStyle">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(200)(0,-1)|12</data-type>
+    </column>
+    <key id="505" parent="65">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="506" parent="66" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="507" parent="66" name="structuralview_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="508" parent="66" name="module_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="509" parent="66" name="sqlite_autoindex_view_structuralview_model_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>structuralview_id
+module_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="510" parent="66" name="view_structuralview_model_761d4834">
+      <columns>structuralview_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="511" parent="66" name="view_structuralview_model_421d176e">
+      <columns>module_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="512" parent="66">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="513" parent="67" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="514" parent="67" name="structuralview_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="515" parent="67" name="variabilityguidelines_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="516" parent="67" name="sqlite_autoindex_view_structuralview_variabilityGuidelines_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>structuralview_id
+variabilityguidelines_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="517" parent="67" name="view_structuralview_variabilityGuidelines_761d4834">
+      <columns>structuralview_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="518" parent="67">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="519" parent="67" name="#FAKE_view_structuralview_variabilityGuidelines_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>variabilityguidelines_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.view_variabilityguidelines.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="520" parent="68" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="521" parent="68" name="structuralview_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="522" parent="68" name="viewpoint_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="523" parent="68" name="sqlite_autoindex_view_structuralview_viewPointRelated_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>structuralview_id
+viewpoint_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="524" parent="68" name="view_structuralview_viewPointRelated_761d4834">
+      <columns>structuralview_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="525" parent="68">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="526" parent="68" name="#FAKE_view_structuralview_viewPointRelated_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>viewpoint_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.view_viewpoint.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="527" parent="69" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="528" parent="69" name="stimulus">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="529" parent="69" name="reaction">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="530" parent="69" name="strategy">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="531" parent="69" name="feature">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <key id="532" parent="69">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="533" parent="70" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="534" parent="70" name="variabilityguidelines_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="535" parent="70" name="quality_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="536" parent="70" name="sqlite_autoindex_view_variabilityguidelines_qualityAtributes_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>variabilityguidelines_id
+quality_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="537" parent="70" name="view_variabilityguidelines_qualityAtributes_1835c53e">
+      <columns>variabilityguidelines_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="538" parent="70">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="539" parent="70" name="#FAKE_view_variabilityguidelines_qualityAtributes_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>quality_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.view_quality.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="540" parent="71" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="541" parent="71" name="file">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="542" parent="71" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="543" parent="71" name="description">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="544" parent="71" name="stakeholder">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="545" parent="71" name="concern">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <key id="546" parent="71">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="547" parent="72" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="548" parent="72" name="view_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="549" parent="72" name="variabilityguidelines_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="550" parent="72" name="sqlite_autoindex_view_view_variabilityGuidelines_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>view_id
+variabilityguidelines_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="551" parent="72" name="view_view_variabilityGuidelines_af3374d1">
+      <columns>view_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="552" parent="72">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="553" parent="72" name="#FAKE_view_view_variabilityGuidelines_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>variabilityguidelines_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.view_variabilityguidelines.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="554" parent="73" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="555" parent="73" name="view_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="556" parent="73" name="viewpoint_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="557" parent="73" name="sqlite_autoindex_view_view_viewPointRelated_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>view_id
+viewpoint_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="558" parent="73" name="view_view_viewPointRelated_af3374d1">
+      <columns>view_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="559" parent="73">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="560" parent="73" name="#FAKE_view_view_viewPointRelated_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>viewpoint_id</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.view_viewpoint.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>no_action</cascade-delete-rule>
+    </foreign-key>
+    <column id="561" parent="74" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="562" parent="74" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="563" parent="74" name="description">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="564" parent="74" name="stakeholder">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="565" parent="74" name="concern">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="566" parent="74" name="componentOne_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="567" parent="74" name="componentTwo_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="568" parent="74" name="relationship">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="569" parent="74" name="property">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="570" parent="74" name="restriction">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <index id="571" parent="74" name="sqlite_autoindex_view_viewpoint_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>componentOne_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="572" parent="74" name="sqlite_autoindex_view_viewpoint_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>componentTwo_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="573" parent="74">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="574" parent="75" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="575" parent="75" name="from_viewpoint_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="576" parent="75" name="to_viewpoint_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <index id="577" parent="75" name="sqlite_autoindex_view_viewpoint_viewPointRelated_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>from_viewpoint_id
+to_viewpoint_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="578" parent="75" name="view_viewpoint_viewPointRelated_c4179850">
+      <columns>from_viewpoint_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="579" parent="75" name="view_viewpoint_viewPointRelated_30cad176">
+      <columns>to_viewpoint_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="580" parent="75">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,164 @@
+{% extends 'tbase.html' %}
+{% load staticfiles %}
+
+{% block cabecalho %}
+    <link rel="stylesheet" href="{% static "adminlte/bootstrap/css/bootstrap.min.css" %}">
+
+  <!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="{% static "adminlte/dist/css/AdminLTE.min.css" %}">
+
+	<!-- AdminLTE Skins. Choose a skin from the css/skins
+	folder instead of downloading all of them to reduce the load. -->
+	<link rel="stylesheet" href="{% static "adminlte/dist/css/skins/_all-skins.min.css" %}">
+
+	<!-- iCheck -->
+	<link rel="stylesheet" href="{% static "adminlte/plugins/iCheck/flat/blue.css" %}">
+
+	<!-- Morris chart -->
+
+	<!-- jvectormap -->
+	<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+	<link rel="stylesheet" href="{% static "adminlte/plugins/datepicker/datepicker3.css" %}">
+
+	<!-- Daterange picker -->
+	<link rel="stylesheet" href="{% static "adminlte/plugins/daterangepicker/daterangepicker-bs3.css" %}">
+
+	<!-- bootstrap wysihtml5 - text editor -->
+	<link rel="stylesheet" href="{% static "adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
+
+
+<title>Cadastro de DSSA</title>
+
+{% endblock %}
+{% block corpo %}
+                  <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Data Table With Full Features</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                      <th>Name</th>
+                      <th>Description</th>
+                      <th>Usages</th>
+                      <th>Show</th>
+                      <th>New</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     {% for form in project %}
+                      <tr>
+                    <td>{{form.name}}</td>
+                    <td>{{form.description}}</td>
+                    <td>{{form.cliques}}</td>
+                    <td><a href="{% url 'show_project' form.id %}"><i class="fa fa-check text-navy"></i></a></td>
+                    <td><a href="{% url 'cadastrar_project' form.id %}"><i class="fa fa-check text-navy"></i></a></td></tr>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                      <th>Name</th>
+                      <th>Description </th>
+                      <th>Usages</th>
+                      <th>Show</th>
+                      <th>New</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+    <a href="{% url 'cadastrar_project' %}"> <button type="button" class="btn btn-primary">New Project</button> </a>
+
+  {% endblock %}
+  <script>
+	        $(document).ready(function(){
+	            $("#wizard").steps();
+	            $("#form").steps({
+	                bodyTag: "fieldset",
+	                onStepChanging: function (event, currentIndex, newIndex)
+	                {
+	                    // Always allow going backward even if the current step contains invalid fields!
+	                    if (currentIndex > newIndex)
+	                    {
+	                        return true;
+	                    }
+
+	                    // Forbid suppressing "Warning" step if the user is to young
+	                    if (newIndex === 3 && Number($("#age").val()) < 18)
+	                    {
+	                        return false;
+	                    }
+
+	                    var form = $(this);
+
+	                    // Clean up if user went backward before
+	                    if (currentIndex < newIndex)
+	                    {
+	                        // To remove error styles
+	                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+	                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+	                    }
+
+	                    // Disable validation on fields that are disabled or hidden.
+	                    form.validate().settings.ignore = ":disabled,:hidden";
+
+	                    // Start validation; Prevent going forward if false
+	                    return form.valid();
+	                },
+	                onStepChanged: function (event, currentIndex, priorIndex)
+	                {
+	                    // Suppress (skip) "Warning" step if the user is old enough.
+	                    if (currentIndex === 2 && Number($("#age").val()) >= 18)
+	                    {
+	                        $(this).steps("next");
+	                    }
+
+	                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+	                    if (currentIndex === 2 && priorIndex === 3)
+	                    {
+	                        $(this).steps("previous");
+	                    }
+	                },
+	                onFinishing: function (event, currentIndex)
+	                {
+	                    var form = $(this);
+
+	                    // Disable validation on fields that are disabled.
+	                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+	                    form.validate().settings.ignore = ":disabled";
+
+	                    // Start validation; Prevent form submission if false
+	                    return form.valid();
+	                },
+	                onFinished: function (event, currentIndex)
+	                {
+	                    var form = $(this);
+
+	                    // Submit form input
+	                    form.submit();
+	                }
+	            }).validate({
+	                        errorPlacement: function (error, element)
+	                        {
+	                            element.before(error);
+	                        },
+	                        rules: {
+	                            confirm: {
+	                                equalTo: "#password"
+	                            }
+	                        }
+	                    });
+	       });
+	    </script>

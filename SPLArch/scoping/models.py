@@ -7,6 +7,7 @@ from SPLArch.architecture.util import render_to_latex
 # Create your models here.
 
 class BindingTime(models.Model):
+    cliques = models.IntegerField(editable=False, default=0)
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
 
@@ -29,6 +30,7 @@ TYPE_CHOICES = (
 )
 
 class Feature(MPTTModel):
+    cliques = models.IntegerField(editable=False, default=0)
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     configuration = models.CharField(max_length=200)
@@ -67,6 +69,7 @@ class Feature(MPTTModel):
 
 
 class Glossary(models.Model):
+    cliques = models.IntegerField(editable=False, default=0)
     term = models.CharField(max_length=200)
     definition = models.TextField(max_length=200)
 
@@ -93,6 +96,7 @@ class Glossary(models.Model):
 
 
 class Product(models.Model):
+    cliques = models.IntegerField(editable=False, default=0)
     name = models.CharField(max_length=200, blank=False)
     description = models.TextField(blank=True)
     features = models.ManyToManyField('Feature', blank=True, symmetrical=False)
@@ -106,6 +110,7 @@ class Product(models.Model):
 
 
 class Project(models.Model):
+    cliques = models.IntegerField(editable=False, default=0)
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     product = models.ManyToManyField(Product)

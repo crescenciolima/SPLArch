@@ -1,0 +1,107 @@
+{% extends 'tbase.html' %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+{% block cabecalho %}
+
+    <link href="{% static "adminlte/bootstrap/css/jquery.steps.css" %}" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static "adminlte/bootstrap/css/bootstrap.min.css" %}">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="{% static "adminlte/dist/css/AdminLTE.min.css" %}">
+
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="{% static "adminlte/dist/css/skins/_all-skins.min.css" %}">
+
+<!-- iCheck -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/iCheck/flat/blue.css" %}">
+
+<!-- Morris chart -->
+
+<!-- jvectormap -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+
+<!-- Date Picker -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+<link rel="stylesheet" href="{% static "adminlte/plugins/datepicker/datepicker3.css" %}">
+
+<!-- Daterange picker -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/daterangepicker/daterangepicker-bs3.css" %}">
+
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" %}">
+
+<link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
+
+<title>New Architecture</title>
+
+
+{% endblock %}
+{% block corpo %}
+            				<div id="tabsleft" class="tabbable tabs-left">
+					<ul>
+					  	<li><a href="#tabsleft-tab1" data-toggle="tab">API</a></li>
+						<li><a href="#tabsleft-tab2" data-toggle="tab">References</a></li>
+						<li><a href="#tabsleft-tab3" data-toggle="tab">Quality Scenarios</a></li>
+					</ul>
+                    <div id="bar" class="progress progress-info progress-striped">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                    </div>
+                                	<form class="form-signin" action="cadastro/arch" method="POST">
+	    {% csrf_token %}
+					<div class="tab-content">
+					    <div class="tab-pane" id="tabsleft-tab1">
+
+        <h2 class="form-signin-heading" style="text-align: center;">New API</h2>
+        <br />
+
+    {% bootstrap_form form_technology %}
+
+
+			<hr/>
+
+					    </div>
+
+					    <div class="tab-pane" id="tabsleft-tab2">
+<h2 class="form-signin-heading" style="text-align: center;">New Reference</h2>
+      <br />
+      <input id="id_title" name="title" type="text" hidden
+    class="form-control" placeholder="Title" value="{{ reference.title }}"
+    >
+
+    <input id="id_name" name="name" type="text"
+    class="form-control" placeholder="Name" value="{{ reference.author }}"
+    required>
+
+        <input id="id_version" name="version" type="text"
+    class="form-control" placeholder="Version" value="{{ reference.publisher }}"
+    required>
+
+    <input id="id_specification" name="specification" type="text"
+    class="form-control" placeholder="Specification" value="{{ reference.publisher }}"
+    required>
+
+    <hr/>
+					    </div>
+						<div class="tab-pane" id="tabsleft-tab3">
+							3
+
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
+					    </div>
+                        </div>
+	</form>
+						<ul class="pager wizard">
+							<li class="previous first"><a href="javascript:;">First</a></li>
+							<li class="previous"><a href="javascript:;">Previous</a></li>
+							<li class="next last"><a href="javascript:;">Last</a></li>
+						  	<li class="next"><a href="javascript:;">Next</a></li>
+							<li class="next finish" style="display:none;" ><a href="javascript:;">Finish</a></li>
+						</ul>
+					</div>
+				</div>
+{% endblock %}
