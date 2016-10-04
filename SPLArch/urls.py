@@ -33,18 +33,15 @@ urlpatterns = patterns('',
     url(r'^show_api/(?P<api_id>\d+)$', views.show_api, name='show_api'),
     url(r'^cadastro/api', views.cadastrarApi, name='cadastro'),
 
-
     url(r'^lista_dssa/', views.lista_dssa, name='dssa'),
     url(r'^cadastro/dssa/', CreateDSSA.as_view(), name='cadastrar_dssa'),
     url(r'^cadastro/dssas', views.cadastrarDSSA),
-
 
    url(r'^cadastro/technology/', CreateTechnologies.as_view(), name='cadastrar_technologies'),
    url(r'^cadastro/technologies', views.cadastrarTechnologie),
    url(r'^lista_technologies/', views.lista_technologies, name='technologies'),
    url(r'^cadastrar_technology/(?P<technology_id>\d+)$', views.technology, name='cadastrar_technology'),
    url(r'^show_technology/(?P<technology_id>\d+)$', views.show_technology, name='show_technologies'),
-
 
     url(r'^lista_references/', views.lista_references, name='references'),
     url(r'^cadastro/reference/', CreateReferences.as_view(), name='cadastrar_references'),
@@ -57,7 +54,6 @@ urlpatterns = patterns('',
     url(r'^cadastrar_scenario/(?P<scenario_id>\d+)$', views.scenario, name='cadastrar_scenario'),
     url(r'^show_scenarios/(?P<scenario_id>\d+)$', views.show_scenarios, name='show_scenarios'),
     url(r'^cadastro/scenario', views.cadastrarScenario),
-
 
     url(r'^lista_requirements/', lista_requirement, name='requirements'),
     url(r'^cadastro/requirement/', CreateRequirement.as_view(), name='cadastrar_requirement'),
@@ -110,13 +106,7 @@ urlpatterns = patterns('',
     url(r'^new_architecture/', cad_Arc, name='new_architecture'),
     url(r'^cadastro/arch', views.cadastrarArc, name='cadastrarArc'),
 
-
    url(r'^tour/', 'SPLArch.architecture.views.home'),
-
-
-
-
-    url(r'^teste', views.ver, name='ver')
 
 
 )
