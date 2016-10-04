@@ -85,6 +85,8 @@ def lista_scenario(request):
 def lista_references(request):
     return render(request, './references/lista_references.html', {'references': References.objects.all})
 
+def start(request):
+    return render(request, 'start.html', context_instance=RequestContext(request))
 
 class CreateScenario(CreateView):
     template_name = './scenario/nova_scenario.html'
@@ -131,6 +133,11 @@ class CreateReferences(CreateView):
     template_name = './references/nova_reference.html'
     model = References
     success_url = reverse_lazy('references')
+
+class CreateAPI(CreateView):
+    template_name = './api/nova_api.html'
+    model = API
+    success_url = reverse_lazy('api')
 
 class CreateTechnologies(CreateView):
     template_name = './technologies/nova_technology.html'

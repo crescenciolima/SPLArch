@@ -26,7 +26,7 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'django.contrib.auth.views.logout_then_login', {'login_url':'/login/'}, name='logout'),
 
     url(r'^lista_api/', views.lista_api, name='index'),
-    url(r'nova_api/', views.nova_api, name='nova_api'),
+    url(r'nova_api/', CreateAPI.as_view(), name='nova_api'),
     url(r'^cadastrar_api/(?P<api_id>\d+)$', views.api, name='cadastrar_api'),
     url(r'^show_api/(?P<api_id>\d+)$', views.show_api, name='show_api'),
     url(r'^cadastro/api', views.cadastrarApi, name='cadastro'),
@@ -108,9 +108,9 @@ urlpatterns = patterns('',
     url(r'^new_architecture/', cad_Arc, name='new_architecture'),
     url(r'^cadastro/arch', views.cadastrarArc, name='cadastrarArc'),
 
+   url(r'^start/', start, name='start'),
 
-
-    url(r'^tour/', 'SPLArch.architecture.views.home'),
+   url(r'^tour/', 'SPLArch.architecture.views.home'),
 
 
 

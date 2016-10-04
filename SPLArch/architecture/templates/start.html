@@ -1,0 +1,104 @@
+{% extends 'tbase.html' %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+{% block cabecalho %}
+
+    <link href="{% static "adminlte/bootstrap/css/jquery.steps.css" %}" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static "adminlte/bootstrap/css/bootstrap.min.css" %}">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="{% static "adminlte/dist/css/AdminLTE.min.css" %}">
+
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="{% static "adminlte/dist/css/skins/_all-skins.min.css" %}">
+
+<!-- iCheck -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/iCheck/flat/blue.css" %}">
+
+<!-- Morris chart -->
+
+<!-- jvectormap -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+
+<!-- Date Picker -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/jvectormap/jquery-jvectormap-1.2.2.css" %}">
+<link rel="stylesheet" href="{% static "adminlte/plugins/datepicker/datepicker3.css" %}">
+
+<!-- Daterange picker -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/daterangepicker/daterangepicker-bs3.css" %}">
+
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet" href="{% static "adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" %}">
+
+<link rel="stylesheet" href="{% static "adminlte/plugins/datatables/dataTables.bootstrap.css" %}">
+
+<title>New Architecture</title>
+
+
+{% endblock %}
+{% block corpo %}
+
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="box">
+                <div class="box-header with-border">
+                  <h3 class="box-title">System</h3>
+
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <div class="row">
+
+                    <div class="col-md-12">
+                      <p class="text-center">
+                        <strong>Assets</strong>
+                      </p>
+                      <div class="progress-group">
+                        <span class="progress-text">Add Products to Cart</span>
+                        <span class="progress-number"><b>160</b>/200</span>
+                        <div class="progress sm">
+                          <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
+                        </div>
+                      </div><!-- /.progress-group -->
+                      <div class="progress-group">
+                        <span class="progress-text">Complete Purchase</span>
+                        <span class="progress-number"><b>310</b>/400</span>
+                        <div class="progress sm">
+                          <div class="progress-bar progress-bar-red" style="width: 80%"></div>
+                        </div>
+                      </div><!-- /.progress-group -->
+                      <div class="progress-group">
+                        <span class="progress-text">Visit Premium Page</span>
+                        <span class="progress-number"><b>480</b>/800</span>
+                        <div class="progress sm">
+                          <div class="progress-bar progress-bar-green" style="width: 80%"></div>
+                        </div>
+                      </div><!-- /.progress-group -->
+                      <div class="progress-group">
+                        <span class="progress-text">Send Inquiries</span>
+                        <span class="progress-number"><b>250</b>/500</span>
+                        <div class="progress sm">
+                          <div class="progress-bar progress-bar-yellow" style="width: 80%"></div>
+                        </div>
+                      </div><!-- /.progress-group -->
+                    </div><!-- /.col -->
+                  </div><!-- /.row -->
+                </div><!-- ./box-body -->
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+          <!-- Main row -->
+
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+
+{% endblock %}
