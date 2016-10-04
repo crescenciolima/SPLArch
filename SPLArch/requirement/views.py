@@ -5,6 +5,7 @@ from django.template import RequestContext
 from django.views.generic import CreateView
 from SPLArch.requirement.models import *
 from SPLArch.requirement.forms import *
+from django.contrib.auth.decorators import login_required
 
 
 class CreateRequirement(CreateView):
@@ -12,6 +13,7 @@ class CreateRequirement(CreateView):
     model = Requirement
     success_url = reverse_lazy('requirement')
 
+@login_required
 def cadastrarRequirement(request):
     if request.method == "POST":
         form = RequirementForm(request.POST, request.FILES)
@@ -24,6 +26,7 @@ def cadastrarRequirement(request):
     return render(request, "./references/cadastrar_references.html", {'form': form},
                   context_instance=RequestContext(request))
 
+@login_required
 def requirement(request, requirement_id):
     form = Requirement.objects.get(id=requirement_id)
     form_requirement = RequirementForm(instance = form)
@@ -32,9 +35,11 @@ def requirement(request, requirement_id):
     form.save();
     return render(request, './requirement/cadastrar_requirement.html', {"form_requirement": form_requirement})
 
+@login_required
 def lista_requirement(request):
     return render(request, './requirement/lista_requirement.html', {'requirements': Requirement.objects.all})
 
+@login_required
 def show_requirements(request, requirement_id):
     register = Requirement.objects.get(id=requirement_id)
     register_form = RequirementForm(instance = register)
@@ -45,6 +50,7 @@ class CreateUseCase(CreateView):
     model = UseCase
     success_url = reverse_lazy('useCase')
 
+@login_required
 def cadastrarUseCase(request):
     if request.method == "POST":
         form = UseCaseForm(request.POST, request.FILES)
@@ -57,15 +63,17 @@ def cadastrarUseCase(request):
     return render(request, "./references/cadastrar_references.html", {'form': form},
                   context_instance=RequestContext(request))
 
-
+@login_required
 def lista_useCase(request):
     return render(request, 'useCase/lista_useCase.html', {'uses': UseCase.objects.all})
 
+@login_required
 def show_useCases(request, use_id):
     register = UseCase.objects.get(id=use_id)
     register_form = UseCaseForm(instance = register)
     return render(request, './useCase/show_useCase.html', {"register_form": register_form})
 
+@login_required
 def useCase(request, use_id):
     form = UseCase.objects.get(id=use_id)
     form_useCase = UseCaseForm(instance = form)
