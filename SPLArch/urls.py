@@ -99,6 +99,12 @@ urlpatterns = patterns('',
    url(r'^cadastrar_binding/(?P<binding_id>\d+)$', binding, name='cadastrar_binding'),
    url(r'^show_binding/(?P<binding_id>\d+)$', show_binding, name='show_binding'),
 
+   url(r'^lista_useCases/', lista_useCase, name='useCase'),
+   url(r'^cadastro/useCase/', CreateUseCase.as_view(), name='cadastrar_useCase'),
+   url(r'^cadastro/useCases', cadastrarUseCase),
+   url(r'^cadastrar_useCase/(?P<use_id>\d+)$', useCase, name='cadastrar_useCase'),
+   url(r'^show_useCase/(?P<use_id>\d+)$', show_useCases, name='show_useCases'),
+
     url(r'^new_architecture/', cad_Arc, name='new_architecture'),
     url(r'^cadastro/arch', views.cadastrarArc, name='cadastrarArc'),
 
